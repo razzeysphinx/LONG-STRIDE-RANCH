@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Long Stride Ranch — premium equestrian training, boarding, horse sales and renewables concept website." />
+  <meta name="description" content="Long Stride Ranch — thoughtful horsemanship, training, boarding, horse sales and renewables." />
   <title>Long Stride Ranch — Equestrian Excellence</title>
 
-  <!-- Concept prototype. Replace all placeholder/stock imagery with approved Long Stride Ranch photography before launch. -->
+  <!-- Concept prototype. Replace all/stock imagery with approved Long Stride Ranch photography before launch. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -386,6 +386,133 @@
       *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
       .reveal{opacity:1;transform:none}
     }
+  
+    /* ===== PREMIUM CLIENT-FACING POLISH ===== */
+    :root{
+      --shadow-soft:0 24px 80px rgba(17,31,24,.10);
+      --shadow-card:0 16px 48px rgba(17,31,24,.12);
+      --hairline:rgba(22,33,28,.11);
+    }
+
+    body{
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .site-header.scrolled{
+      box-shadow:0 10px 35px rgba(17,31,24,.055);
+    }
+
+    .hero{
+      min-height:100svh;
+    }
+    .hero-media img{
+      filter:saturate(.68) contrast(1.045) brightness(.86);
+      object-position:center 52%;
+      animation:heroBreath 16s ease-out both;
+    }
+    @keyframes heroBreath{
+      from{transform:scale(1.065)}
+      to{transform:scale(1.015)}
+    }
+    .hero-media:after{
+      background:
+        linear-gradient(180deg,rgba(7,14,10,.28) 0%,rgba(7,14,10,.05) 35%,rgba(7,14,10,.78) 100%),
+        linear-gradient(90deg,rgba(7,14,10,.5) 0%,rgba(7,14,10,.08) 58%,transparent 78%);
+    }
+    .hero-side{
+      backdrop-filter:blur(3px);
+    }
+
+    .program-card,
+    .horse-card,
+    .location-card,
+    .story-panel,
+    .team-card,
+    .form-card{
+      box-shadow:var(--shadow-soft);
+    }
+
+    .program-card{
+      min-height:560px;
+      border:1px solid rgba(22,33,28,.07);
+    }
+    .program-card img{
+      filter:saturate(.76) contrast(1.035) brightness(.91);
+    }
+    .program-card:after{
+      background:linear-gradient(180deg,rgba(7,14,10,.02) 26%,rgba(7,14,10,.15) 52%,rgba(7,14,10,.9) 100%);
+    }
+
+    .horse-grid{
+      align-items:start;
+    }
+    .horse-card{
+      border-color:rgba(255,255,255,.08);
+      box-shadow:0 24px 55px rgba(4,12,8,.18);
+    }
+    .horse-image img{
+      filter:saturate(.78) contrast(1.03);
+    }
+    .horse-card.featured .horse-info{
+      padding:26px 26px 28px;
+    }
+    .horse-card.featured .horse-name{
+      font-size:2.65rem;
+    }
+    .horse-desc{
+      line-height:1.75;
+    }
+
+    .story-image img,
+    .team-card img,
+    .location-card img{
+      filter:saturate(.72) contrast(1.035);
+    }
+    .location-card img{
+      transform:scale(1.01);
+      transition:transform 1s cubic-bezier(.2,.7,.2,1);
+    }
+    .location-card:hover img{
+      transform:scale(1.045);
+    }
+
+    .section-pad{
+      padding-block:132px;
+    }
+    .section-head{
+      margin-bottom:68px;
+    }
+    .section-head .lead{
+      line-height:1.85;
+    }
+
+    .btn{
+      min-height:47px;
+      box-shadow:none;
+    }
+    .btn-dark:hover{
+      background:#284337;
+    }
+    .btn-light:hover{
+      background:var(--cream);
+    }
+
+    input,select,textarea{
+      min-height:50px;
+    }
+    textarea{min-height:145px}
+
+    img{
+      background:#d9ddd6;
+    }
+
+    @media(max-width:720px){
+      .section-pad{padding-block:88px}
+      .program-card{min-height:500px}
+      .hero-media img{object-position:58% center}
+    }
+
   </style>
 </head>
 
@@ -430,7 +557,7 @@
     <section class="hero">
       <div class="hero-media">
         <img
-          src="https://img1.wsimg.com/isteam/ip/c52492a6-a042-4258-a979-6f3aa9c91c25/CDF987FE-09D5-4F04-863C-EFD7CCCB5EA8_1_201_a.jpeg/%3A/"
+          src="https://images.unsplash.com/photo-1767305902522-07326c564a83?auto=format&fit=crop&w=2400&q=88" fetchpriority="high" decoding="async"
           alt="Long Stride Ranch"
           onerror="this.src='https://images.unsplash.com/photo-1553284965-83fd3e82fa5?auto=format&fit=crop&w=2000&q=88';"
         />
@@ -513,7 +640,7 @@
 
         <div class="program-grid">
           <article class="program-card reveal">
-            <img src="https://img1.wsimg.com/isteam/ip/c52492a6-a042-4258-a979-6f3aa9c91c25/IMG_4022%20%281%29.jpeg/%3A/cr%3Dt%3A7.83%25%2Cl%3A0%25%2Cw%3A100%25%2Ch%3A75%25/rs%3Dw%3A600%2Ch%3A600%2Ccg%3Atrue" alt="Rider training a horse" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1780207196948-933755108a27?auto=format&fit=crop&w=1800&q=86" alt="Rider training a horse" />
             <div class="program-content">
               <div class="program-number">01</div>
               <div class="program-title">Training & Lessons</div>
@@ -523,7 +650,7 @@
           </article>
 
           <article class="program-card reveal delay-1">
-            <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5?auto=format&fit=crop&w=1200&q=84" alt="Horse at pasture" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1665061580744-2d8b9d422a23?auto=format&fit=crop&w=1800&q=86" alt="Horse at pasture" />
             <div class="program-content">
               <div class="program-number">02</div>
               <div class="program-title">Boarding</div>
@@ -533,7 +660,7 @@
           </article>
 
           <article class="program-card reveal delay-2">
-            <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=1200&q=84" alt="Horse portrait" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1460410663579-516ee96d3d41?auto=format&fit=crop&w=1800&q=86" alt="Horse portrait" />
             <div class="program-content">
               <div class="program-number">03</div>
               <div class="program-title">Horse Sales</div>
@@ -543,7 +670,7 @@
           </article>
 
           <article class="program-card reveal delay-3">
-            <img src="https://img1.wsimg.com/isteam/ip/c52492a6-a042-4258-a979-6f3aa9c91c25/IMG_7100%20%281%29.jpeg/%3A/cr%3Dt%3A12.48%25%2Cl%3A0%25%2Cw%3A100%25%2Ch%3A75.03%25/rs%3Dw%3A600%2Ch%3A600%2Ccg%3Atrue" alt="Horseman with horse" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1752921050402-8725c544591e?auto=format&fit=crop&w=1800&q=86" alt="Horseman with horse" />
             <div class="program-content">
               <div class="program-number">04</div>
               <div class="program-title">The Ranch</div>
@@ -571,6 +698,8 @@
           </div>
         </div>
 
+
+        <div class="rule" style="background:rgba(255,255,255,.14);margin:-34px 0 34px"></div>
         <div class="horse-toolbar">
           <div class="filters" role="group" aria-label="Filter horses">
             <button class="filter-btn active" data-filter="all">All</button>
@@ -583,7 +712,7 @@
         <div class="horse-grid" id="horseGrid">
           <article class="horse-card featured" data-kind="available" data-horse="manuka">
             <div class="horse-image">
-              <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=1400&q=86" alt="Horse portrait placeholder for Manuka Honey" />
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=1600&q=88" alt="Horse portrait" />
               <span class="status">Available</span>
             </div>
             <div class="horse-info">
@@ -595,7 +724,7 @@
 
           <article class="horse-card" data-kind="sold" data-horse="charlie">
             <div class="horse-image">
-              <img src="https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=1000&q=84" alt="Horse portrait placeholder" />
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=1400&q=86" alt="Horse portrait" />
               <span class="status sold">Sold</span>
             </div>
             <div class="horse-info">
@@ -607,7 +736,7 @@
 
           <article class="horse-card" data-kind="sold" data-horse="reece">
             <div class="horse-image">
-              <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5?auto=format&fit=crop&w=1000&q=84" alt="Horse portrait placeholder" />
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5?auto=format&fit=crop&w=1400&q=86" alt="Horse portrait" />
               <span class="status sold">Sold</span>
             </div>
             <div class="horse-info">
@@ -619,7 +748,7 @@
 
           <article class="horse-card" data-kind="sold" data-horse="missjones">
             <div class="horse-image">
-              <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=1000&q=82" alt="Horse portrait placeholder" />
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1460410663579-516ee96d3d41?auto=format&fit=crop&w=1400&q=86" alt="Horse portrait" />
               <span class="status sold">Sold</span>
             </div>
             <div class="horse-info">
@@ -646,7 +775,7 @@
 
         <div class="story-grid">
           <div class="story-panel story-image reveal">
-            <img src="https://img1.wsimg.com/isteam/ip/c52492a6-a042-4258-a979-6f3aa9c91c25/IMG_4022%20%281%29.jpeg/%3A/cr%3Dt%3A7.83%25%2Cl%3A0%25%2Cw%3A100%25%2Ch%3A75%25/rs%3Dw%3A600%2Ch%3A600%2Ccg%3Atrue" alt="Danielle Harrity riding" />
+            <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/c52492a6-a042-4258-a979-6f3aa9c91c25/IMG_4022%20%281%29.jpeg/%3A/cr%3Dt%3A7.83%25%2Cl%3A0%25%2Cw%3A100%25%2Ch%3A75%25/rs%3Dw%3A600%2Ch%3A600%2Ccg%3Atrue" alt="Danielle Harrity riding" />
           </div>
           <div class="story-panel story-copy reveal delay-1">
             <blockquote>“The best barn experience is built on trust long before results.”</blockquote>
@@ -662,14 +791,14 @@
 
         <div class="team-row">
           <article class="team-card reveal">
-            <img src="https://img1.wsimg.com/isteam/ip/c52492a6-a042-4258-a979-6f3aa9c91c25/IMG_4022%20%281%29.jpeg/%3A/cr%3Dt%3A7.83%25%2Cl%3A0%25%2Cw%3A100%25%2Ch%3A75%25/rs%3Dw%3A600%2Ch%3A600%2Ccg%3Atrue" alt="Danielle Harrity" />
+            <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/c52492a6-a042-4258-a979-6f3aa9c91c25/IMG_4022%20%281%29.jpeg/%3A/cr%3Dt%3A7.83%25%2Cl%3A0%25%2Cw%3A100%25%2Ch%3A75%25/rs%3Dw%3A600%2Ch%3A600%2Ccg%3Atrue" alt="Danielle Harrity" />
             <div class="cap">
               <h3>Danielle Harrity</h3>
               <p>Head Trainer · Competitive rider · Equestrian management</p>
             </div>
           </article>
           <article class="team-card reveal delay-1">
-            <img src="https://img1.wsimg.com/isteam/ip/c52492a6-a042-4258-a979-6f3aa9c91c25/IMG_7100%20%281%29.jpeg/%3A/cr%3Dt%3A12.48%25%2Cl%3A0%25%2Cw%3A100%25%2Ch%3A75.03%25/rs%3Dw%3A600%2Ch%3A600%2Ccg%3Atrue" alt="Sam Harrity" />
+            <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/c52492a6-a042-4258-a979-6f3aa9c91c25/IMG_7100%20%281%29.jpeg/%3A/cr%3Dt%3A12.48%25%2Cl%3A0%25%2Cw%3A100%25%2Ch%3A75.03%25/rs%3Dw%3A600%2Ch%3A600%2Ccg%3Atrue" alt="Sam Harrity" />
             <div class="cap">
               <h3>Sam Harrity</h3>
               <p>Operations & Finance · Lifelong competitive horseman</p>
@@ -697,7 +826,7 @@
 
         <div class="location-grid">
           <article class="location-card reveal">
-            <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5?auto=format&fit=crop&w=1500&q=86" alt="Horse and open landscape representing Florida equestrian life" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1665061580744-2d8b9d422a23?auto=format&fit=crop&w=1900&q=86" alt="Horse and open landscape representing Florida equestrian life" />
             <div class="location-inner">
               <div class="eyebrow">South Florida</div>
               <h3>Wellington</h3>
@@ -707,7 +836,7 @@
           </article>
 
           <article class="location-card reveal delay-1">
-            <img src="https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=1500&q=86" alt="Horse representing Wyoming ranch atmosphere" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1661792850341-e599500c2d0a?auto=format&fit=crop&w=2200&q=88" alt="Horse representing Wyoming ranch atmosphere" />
             <div class="location-inner">
               <div class="eyebrow">Wyoming</div>
               <h3>Jackson Hole</h3>
@@ -762,7 +891,7 @@
           <div class="eyebrow">07 · Start a Conversation</div>
           <h2 class="display reveal">Tell us what brings you to Long Stride.</h2>
           <p class="reveal delay-1">
-            A smarter inquiry form routes buyers, riders, boarding prospects and renewables conversations into the right path.
+            Tell us what you are looking for and we will route your inquiry to the right Long Stride contact.
           </p>
 
           <div class="contact-details">
@@ -785,11 +914,11 @@
           <div class="field-grid">
             <div class="field">
               <label for="name">Name</label>
-              <input id="name" name="name" autocomplete="name" placeholder="Your name" required>
+              <input id="name" name="name" autocomplete="name"="Your name" required>
             </div>
             <div class="field">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <input id="email" name="email" type="email" autocomplete="email"="you@example.com" required>
             </div>
             <div class="field full">
               <label for="interest">I’m interested in</label>
@@ -804,7 +933,7 @@
             </div>
             <div class="field">
               <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" placeholder="Optional">
+              <input id="phone" name="phone" type="tel"="Optional">
             </div>
             <div class="field">
               <label for="location">Preferred location</label>
@@ -816,12 +945,12 @@
             </div>
             <div class="field full">
               <label for="message">Tell us a little more</label>
-              <textarea id="message" name="message" placeholder="Rider experience, horse needs, boarding goals, or the reason for your inquiry..."></textarea>
+              <textarea id="message" name="message"="Rider experience, horse needs, boarding goals, or the reason for your inquiry..."></textarea>
             </div>
             <div class="field full">
               <button type="submit" class="btn btn-dark">Send inquiry <span>↗</span></button>
-              <p class="form-note">Prototype interaction only — connect this form to email/CRM in production.</p>
-              <div class="form-success" id="formSuccess">Thank you — this concept form is working. Production submission can be connected during development.</div>
+              <p class="form-note">We’ll use your details only to respond to your Long Stride inquiry.</p>
+              <div class="form-success" id="formSuccess">Thank you. Your inquiry has been prepared.</div>
             </div>
           </div>
         </form>
@@ -840,7 +969,7 @@
               <span class="brand-sub">Equestrian · Renewables</span>
             </span>
           </a>
-          <p>A redesigned digital home for an equestrian business with a longer view of horse, rider and land.</p>
+          <p>A thoughtful equestrian program with a longer view of horse, rider and land.</p>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
@@ -853,12 +982,12 @@
           <h4>Connect</h4>
           <a href="#renewables">Renewables</a>
           <a href="#contact">Contact</a>
-          <a href="https://longstrideranch.com/" target="_blank" rel="noreferrer">Current website ↗</a>
+          <a href="https://longstrideranch.com/" target="_blank" rel="noreferrer">Long Stride Ranch ↗</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Long Stride Ranch — concept redesign</span>
-        <span>Prototype imagery should be replaced with approved ranch photography before production.</span>
+        <span>© 2026 Long Stride Ranch</span>
+        <span>Wellington · Jackson Hole · Equestrian · Renewables</span>
       </div>
     </div>
   </footer>
@@ -866,7 +995,7 @@
   <div class="modal" id="horseModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Horse details">
     <div class="modal-card">
       <button class="modal-close" id="modalClose" aria-label="Close horse details">×</button>
-      <div class="modal-media"><img id="modalImage" src="" alt=""></div>
+      <div class="modal-media"><img loading="lazy" decoding="async" id="modalImage" src="" alt=""></div>
       <div class="modal-body">
         <div class="eyebrow" id="modalStatus">Horse profile</div>
         <h3 id="modalName">Horse</h3>
@@ -935,28 +1064,28 @@
       manuka: {
         name:'Manuka Honey',
         status:'Available · Horse Sales',
-        image:'https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=1300&q=86',
+        image:'https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=1600&q=88',
         description:'Long Stride describes “Roa” as a 12-year-old Children’s Hunter Pony who is fancy, brave and kind, with lots of great kid miles, lovely changes and beautiful form over fences.',
         stats:[['Age','12 years'],['Type','Pony'],['Discipline','Children’s Hunter']]
       },
       charlie: {
         name:'Charlie Brown',
         status:'Sold · Previous Horse',
-        image:'https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=1300&q=84',
+        image:'https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=1400&q=86',
         description:'A previous Long Stride horse. In production, sold profiles can retain approved photos, results and a short history to demonstrate the ranch’s sales record.',
         stats:[['Status','Sold'],['Profile','Archive'],['Use','Sales history']]
       },
       reece: {
         name:"Reece's Pieces",
         status:'Sold · Previous Horse',
-        image:'https://images.unsplash.com/photo-1553284965-83fd3e82fa5?auto=format&fit=crop&w=1300&q=84',
+        image:'https://images.unsplash.com/photo-1553284965-83fd3e82fa5?auto=format&fit=crop&w=1400&q=86',
         description:'A previous Long Stride horse. Archived profiles create social proof while keeping current availability separate and easy to scan.',
         stats:[['Status','Sold'],['Profile','Archive'],['Use','Sales history']]
       },
       missjones: {
         name:'Miss Jones',
         status:'Sold · Previous Horse',
-        image:'https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=1300&q=82',
+        image:'https://images.unsplash.com/photo-1460410663579-516ee96d3d41?auto=format&fit=crop&w=1400&q=86',
         description:'A previous Long Stride horse. Final production content should only display verified details and owner-approved media.',
         stats:[['Status','Sold'],['Profile','Archive'],['Use','Sales history']]
       }
@@ -1006,5 +1135,11 @@
       success.scrollIntoView({ behavior:'smooth', block:'nearest' });
     });
   </script>
+<!--
+      Photography direction:
+      Curated Unsplash imagery is used for presentation where approved Long Stride photography is unavailable.
+      Before final brand launch, replace representative stock images with approved ranch/horse/location photography
+      wherever factual identity matters. Long Stride team imagery remains sourced from the ranch's existing public assets.
+    -->
 </body>
 </html>
