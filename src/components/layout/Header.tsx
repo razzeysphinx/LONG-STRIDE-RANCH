@@ -9,6 +9,8 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [pastHero, setPastHero] = useState(false);
   const closeRef = useRef<HTMLButtonElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const wasOpen = useRef(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,6 +25,8 @@ export function Header() {
   useEffect(() => {
     document.body.classList.toggle("menu-open", open);
     if (open) closeRef.current?.focus();
+    if (!open && wasOpen.current) triggerRef.current?.focus();
+    wasOpen.current = open;
     return () => document.body.classList.remove("menu-open");
   }, [open]);
 
@@ -60,6 +64,7 @@ export function Header() {
             </Link>
           </nav>
           <button
+            ref={triggerRef}
             className="grid size-11 place-items-center lg:hidden"
             onClick={() => setOpen(true)}
             aria-label="Open navigation"

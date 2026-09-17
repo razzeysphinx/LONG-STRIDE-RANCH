@@ -14,16 +14,16 @@ Legacy HTML pages, `style.css`, `site.js`, manual `robots.txt`, manual `sitemap.
 
 Created foundation/configuration, App Router routes, `/api/inquiry`, reusable layout/section/form components, horse/team/testimonial data, image optimizer, environment example, redirects/security headers, dynamic sitemap/robots, custom 404, and developer documentation.
 
-| Source JPG | Source size | Optimized WebP |
-| --- | ---: | ---: |
-| hero-jumping.jpg | 913 KB | 614 KB |
-| danielle-harrity.jpg | 436 KB | 335 KB |
-| sam-harrity.jpg | 215 KB | 170 KB |
-| horse-care.jpg | 542 KB | 478 KB |
-| horse-portrait.jpg | 511 KB | 337 KB |
-| competition.jpg | 372 KB | 230 KB |
-| show-jumping.jpg | 977 KB | 640 KB |
-| sales-manuka-honey.jpg | 929 KB | 625 KB |
+| Source JPG             | Source size | Optimized WebP |
+| ---------------------- | ----------: | -------------: |
+| hero-jumping.jpg       |      913 KB |         614 KB |
+| danielle-harrity.jpg   |      436 KB |         335 KB |
+| sam-harrity.jpg        |      215 KB |         170 KB |
+| horse-care.jpg         |      542 KB |         478 KB |
+| horse-portrait.jpg     |      511 KB |         337 KB |
+| competition.jpg        |      372 KB |         230 KB |
+| show-jumping.jpg       |      977 KB |         640 KB |
+| sales-manuka-honey.jpg |      929 KB |         625 KB |
 
 ## 8–11. Page and conversion changes
 
