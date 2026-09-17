@@ -37,9 +37,7 @@ export function InquiryForm({
       setStatus("success");
     } catch {
       setStatus("error");
-      setMessage(
-        "We could not send your inquiry online. Please email danielle@longstrideranch.com directly.",
-      );
+      setMessage("Online submission is temporarily unavailable.");
     }
   }
   if (status === "success")
@@ -135,6 +133,18 @@ export function InquiryForm({
             aria-live="polite"
           >
             {message}
+            {status === "error" && (
+              <>
+                {" "}
+                Email Danielle directly:{" "}
+                <a
+                  className="underline"
+                  href="mailto:danielle@longstrideranch.com"
+                >
+                  danielle@longstrideranch.com
+                </a>
+              </>
+            )}
           </p>
         </div>
       </div>

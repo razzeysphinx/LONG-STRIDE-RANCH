@@ -1,30 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CTA } from "@/components/sections/CTA";
-import { SectionHeading } from "@/components/sections/SectionHeading";
-const paths = [
-  {
-    title: "Training",
-    copy: "Understand the considered approach to horse and rider development.",
-    href: "/training",
-    image: "/images/team/danielle-harrity.webp",
-    alt: "Danielle Harrity riding at Long Stride Ranch",
-  },
-  {
-    title: "Boarding",
-    copy: "Explore the care philosophy and environment surrounding horses based with Long Stride.",
-    href: "/boarding",
-    image: "/images/boarding/horse-care.webp",
-    alt: "Rider with a Long Stride Ranch horse",
-  },
-  {
-    title: "Horse Sales",
-    copy: "View the current offering and begin a qualified purchase conversation.",
-    href: "/horse-sales",
-    image: "/images/sales/manuka-honey.webp",
-    alt: "Horse offered through Long Stride Ranch sales",
-  },
-];
+import { SeasonalStory } from "@/components/sections/SeasonalStory";
+import { ServicePaths } from "@/components/sections/ServicePaths";
+import { TeamFeature } from "@/components/sections/TeamFeature";
+
 export default function HomePage() {
   return (
     <main id="main">
@@ -60,9 +40,9 @@ export default function HomePage() {
                 </Link>
                 <Link
                   className="rounded-full border border-white/45 px-6 py-4 text-[11px] font-bold uppercase tracking-[.11em]"
-                  href="/training"
+                  href="/contact"
                 >
-                  Explore training
+                  Start an inquiry
                 </Link>
               </div>
             </div>
@@ -73,63 +53,20 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="bg-[var(--ls-forest)] py-8 text-[var(--ls-cream)]">
+      <section className="bg-[var(--ls-forest)] py-9 text-[var(--ls-cream)]">
         <div className="ls-container grid gap-3 md:grid-cols-[.4fr_1fr_.8fr]">
           <p className="ls-eyebrow mb-0">Long Stride Ranch</p>
           <p className="font-display text-3xl leading-tight">
             Serious horsemanship, held to a personal standard.
           </p>
           <p className="text-sm text-white/70">
-            Explore the people, horses and services that shape a considered
-            program.
+            A boutique English equestrian program for horses, riders and
+            personal client relationships.
           </p>
         </div>
       </section>
-      <section className="ls-section">
-        <div className="ls-container">
-          <SectionHeading
-            eyebrow="Choose your path"
-            title="What brings you to Long Stride?"
-            description="A clear starting point for riders, owners and buyers."
-          />
-          <div className="grid gap-4 lg:grid-cols-3">
-            {paths.map((path) => (
-              <Link
-                key={path.href}
-                className="group overflow-hidden rounded-[24px] border border-[var(--ls-line)] bg-white"
-                href={path.href}
-              >
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <Image
-                    src={path.image}
-                    alt={path.alt}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="image-treatment premium-hover-image object-cover"
-                  />
-                </div>
-                <div className="p-7">
-                  <p className="ls-eyebrow">
-                    {path.title === "Horse Sales"
-                      ? "Buyers"
-                      : path.title === "Boarding"
-                        ? "Horse care"
-                        : "Riders & owners"}
-                  </p>
-                  <h2 className="ls-display text-5xl">{path.title}</h2>
-                  <p className="mt-4 text-sm leading-6 text-[var(--ls-muted)]">
-                    {path.copy}
-                  </p>
-                  <span className="mt-6 inline-block text-[11px] font-bold uppercase tracking-[.11em]">
-                    Explore →
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="relative min-h-[620px] overflow-hidden text-white">
+      <ServicePaths />
+      <section className="relative min-h-[660px] overflow-hidden text-white">
         <Image
           src="/images/horses/competition.webp"
           alt="Long Stride Ranch horse and rider in the show ring"
@@ -137,7 +74,7 @@ export default function HomePage() {
           sizes="100vw"
           className="image-treatment object-cover"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,20,13,.58),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,20,13,.65),transparent_70%)]" />
         <div className="ls-container relative z-10 py-36">
           <p className="ls-eyebrow">Featured horse</p>
           <h2 className="ls-display max-w-3xl text-[clamp(4rem,7vw,7.5rem)]">
@@ -147,14 +84,39 @@ export default function HomePage() {
             A Children&apos;s Hunter Pony described by Long Stride as fancy,
             brave and kind.
           </p>
-          <Link
-            className="mt-7 inline-flex rounded-full bg-white px-6 py-4 text-[11px] font-bold uppercase tracking-[.11em] text-[var(--ls-ink)]"
-            href="/horse-sales/manuka-honey"
-          >
-            Meet Manuka Honey
-          </Link>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link
+              className="inline-flex rounded-full bg-white px-6 py-4 text-[11px] font-bold uppercase tracking-[.11em] text-[var(--ls-ink)]"
+              href="/horse-sales/manuka-honey"
+            >
+              View horse
+            </Link>
+            <Link
+              className="inline-flex rounded-full border border-white/40 px-6 py-4 text-[11px] font-bold uppercase tracking-[.11em]"
+              href="/contact?interest=Horse%20Purchase&horse=Manuka%20Honey"
+            >
+              Ask about Manuka
+            </Link>
+          </div>
         </div>
       </section>
+      <section className="ls-section">
+        <div className="ls-container grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
+          <div>
+            <p className="ls-eyebrow">Horsemanship</p>
+            <h2 className="ls-display text-[clamp(4rem,6vw,6.5rem)]">
+              The standard is felt in the everyday work.
+            </h2>
+          </div>
+          <p className="max-w-2xl self-end text-[17px] leading-8 text-[var(--ls-muted)]">
+            Long Stride is built around the work that matters most: developing
+            horses thoughtfully, supporting riders honestly and giving every
+            partnership the attention it deserves.
+          </p>
+        </div>
+      </section>
+      <SeasonalStory />
+      <TeamFeature />
       <CTA eyebrow="Start a conversation" title="Tell us what you need.">
         Whether you are looking for a horse, training, boarding or a renewables
         conversation, we will help route you to the right next step.
