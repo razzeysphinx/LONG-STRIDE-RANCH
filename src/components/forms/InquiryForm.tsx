@@ -4,12 +4,13 @@ import { useState } from "react";
 
 const interests = [
   "Horse Purchase",
-  "Training & Lessons",
+  "Training",
   "Boarding",
-  "Schedule a Visit",
+  "Visit",
   "Renewables",
-  "General Inquiry",
+  "General",
 ];
+
 export function InquiryForm({
   defaultInterest = "Horse Purchase",
   horse,
@@ -17,7 +18,10 @@ export function InquiryForm({
   defaultInterest?: string;
   horse?: string;
 }) {
-  const [interest, setInterest] = useState(defaultInterest);
+  const normalisedInterest = interests.includes(defaultInterest)
+    ? defaultInterest
+    : "Horse Purchase";
+  const [interest, setInterest] = useState(normalisedInterest);
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
@@ -42,7 +46,7 @@ export function InquiryForm({
   }
   if (status === "success")
     return (
-      <div className="rounded-[24px] bg-[var(--ls-cream)] p-8 md:p-12">
+      <div className="rounded-[18px] bg-[var(--ls-cream)] p-8 md:p-12">
         <p className="ls-eyebrow">Thank you</p>
         <h2 className="ls-display text-6xl">Your inquiry is on its way.</h2>
         <p className="mt-5 max-w-lg text-sm leading-7 text-[var(--ls-muted)]">
@@ -54,8 +58,21 @@ export function InquiryForm({
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-[24px] bg-[var(--ls-cream)] p-6 md:p-9"
+      className="rounded-[18px] bg-[var(--ls-cream)] p-6 md:p-9"
     >
+      <div className="mb-6 flex flex-wrap gap-2" aria-label="Inquiry type">
+        {interests.map((item) => (
+          <button
+            key={item}
+            type="button"
+            onClick={() => setInterest(item)}
+            className={`border px-3 py-2 text-[10px] font-bold uppercase tracking-[.09em] ${interest === item ? "border-[var(--ls-forest)] bg-[var(--ls-forest)] text-white" : "border-[var(--ls-line)]"}`}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
+      <input type="hidden" name="interest" value={interest} />
       <div className="grid gap-4 md:grid-cols-2">
         <div className="field">
           <label htmlFor="name">Name</label>
@@ -70,19 +87,6 @@ export function InquiryForm({
             required
             autoComplete="email"
           />
-        </div>
-        <div className="field md:col-span-2">
-          <label htmlFor="interest">I’m contacting Long Stride about</label>
-          <select
-            id="interest"
-            name="interest"
-            value={interest}
-            onChange={(event) => setInterest(event.target.value)}
-          >
-            {interests.map((item) => (
-              <option key={item}>{item}</option>
-            ))}
-          </select>
         </div>
         <div className="field">
           <label htmlFor="phone">Phone</label>
@@ -107,8 +111,38 @@ export function InquiryForm({
               <input id="experience" name="riderExperience" />
             </div>
             <div className="field md:col-span-2">
-              <label htmlFor="discipline">Preferred discipline</label>
+              <label htmlFor="discipline">Discipline</label>
               <input id="discipline" name="discipline" />
+            </div>
+          </>
+        )}
+        {interest === "Training" && (
+          <>
+            <div className="field md:col-span-2">
+              <label htmlFor="context">Rider / horse context</label>
+              <input id="context" name="context" />
+            </div>
+            <div className="field md:col-span-2">
+              <label htmlFor="goals">Goals</label>
+              <input id="goals" name="goals" />
+            </div>
+          </>
+        )}
+        {interest === "Boarding" && (
+          <div className="field md:col-span-2">
+            <label htmlFor="context">Horse context</label>
+            <input id="context" name="context" />
+          </div>
+        )}
+        {interest === "Renewables" && (
+          <>
+            <div className="field">
+              <label htmlFor="organization">Organization</label>
+              <input id="organization" name="organization" />
+            </div>
+            <div className="field">
+              <label htmlFor="context">Project context</label>
+              <input id="context" name="context" />
             </div>
           </>
         )}

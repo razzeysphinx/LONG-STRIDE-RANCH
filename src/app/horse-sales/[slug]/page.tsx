@@ -1,8 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { HorseMedia } from "@/components/media/HorseMedia";
 import { CTA } from "@/components/sections/CTA";
 import { getHorseBySlug, horses } from "@/data/horses";
+import { media } from "@/data/media";
 import { pageMetadata } from "@/lib/metadata";
 export function generateStaticParams() {
   return horses.map(({ slug }) => ({ slug }));
@@ -18,14 +19,14 @@ export async function generateMetadata({
         title: horse.name,
         description: horse.summary,
         path: `/horse-sales/${horse.slug}`,
-        image: horse.images[0],
+        image: horse.images[0].src,
       })
     : pageMetadata({
         title: "Horse Sales",
         description:
           "Explore the current horse sales offering at Long Stride Ranch.",
         path: "/horse-sales",
-        image: "/images/sales/manuka-honey.webp",
+        image: media.manukaHoney.src,
       });
 }
 export default async function HorseProfile({
@@ -37,7 +38,7 @@ export default async function HorseProfile({
   if (!horse) notFound();
   return (
     <main id="main">
-      <section className="bg-[var(--ls-cream)] pb-20 pt-36 md:pt-44">
+      <section className="bg-[var(--ls-cream)] pb-16 pt-36 md:pt-44">
         <div className="ls-container">
           <p className="ls-eyebrow">Horse Sales · Available</p>
           <h1 className="ls-display text-[clamp(4.3rem,8vw,8.5rem)]">
@@ -49,24 +50,25 @@ export default async function HorseProfile({
         </div>
       </section>
       <section className="ls-section">
-        <div className="ls-container grid gap-5 lg:grid-cols-[1.1fr_.9fr]">
-          <div className="relative min-h-[590px] overflow-hidden rounded-[24px]">
-            <Image
-              src={horse.images[0]}
-              alt={`${horse.name} offered through Long Stride Ranch`}
-              fill
-              priority
-              sizes="(max-width:1024px) 100vw, 60vw"
-              className="image-treatment object-cover"
-            />
-          </div>
-          <div className="flex flex-col justify-between rounded-[24px] bg-[var(--ls-cream)] p-8 md:p-12">
+        <div className="ls-container grid gap-10 lg:grid-cols-[1.1fr_.9fr]">
+          <HorseMedia
+            src={horse.images[0].src}
+            alt={horse.images[0].alt}
+            ratio="horse"
+            focalDesktop={media.manukaHoney.focal.desktop}
+            focalMobile={media.manukaHoney.focal.mobile}
+            priority
+            sizes="(max-width:1024px) 100vw, 60vw"
+          />
+          <div className="flex flex-col justify-between border-t border-[var(--ls-line)] py-6 lg:border-t-0">
             <div>
               <p className="ls-eyebrow">Meet {horse.name}</p>
-              <h2 className="ls-display text-6xl">Fancy, brave and kind.</h2>
+              <h2 className="ls-display text-[clamp(3.7rem,5.5vw,6rem)]">
+                Fancy, brave and kind.
+              </h2>
             </div>
             <div>
-              <p className="text-sm leading-7 text-[var(--ls-muted)]">
+              <p className="mt-8 text-sm leading-7 text-[var(--ls-muted)]">
                 {horse.description}
               </p>
               <Link

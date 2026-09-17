@@ -11,7 +11,12 @@ export const horses: Horse[] = [
       "Fancy, brave and kind, with great kid miles, lovely changes and beautiful form over fences.",
     description:
       "Known as Roa, Manuka Honey is represented by Long Stride as a Children's Hunter Pony. Contact Long Stride for current availability and a considered conversation about fit.",
-    images: ["/images/sales/manuka-honey.webp"],
+    images: [
+      {
+        src: "/images/sales/manuka-honey.webp",
+        alt: "Manuka Honey jumping in the show ring",
+      },
+    ],
     featured: true,
   },
 ];

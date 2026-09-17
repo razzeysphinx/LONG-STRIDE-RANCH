@@ -1,20 +1,18 @@
-import Image from "next/image";
 import Link from "next/link";
-
+import { HorseMedia } from "@/components/media/HorseMedia";
+import { media } from "@/data/media";
 export function TeamFeature() {
   return (
     <section className="ls-section">
       <div className="ls-container grid gap-4 md:grid-cols-[1.1fr_.9fr]">
-        <div className="relative min-h-[520px] overflow-hidden rounded-[24px]">
-          <Image
-            src="/images/team/sam-harrity.webp"
-            alt="Sam Harrity with a horse at Long Stride Ranch"
-            fill
-            sizes="(max-width: 768px) 100vw, 60vw"
-            className="image-treatment object-cover"
-          />
-        </div>
-        <div className="flex flex-col justify-between rounded-[24px] bg-[var(--ls-forest)] p-8 text-[var(--ls-cream)] md:p-12">
+        <HorseMedia
+          {...media.samHorse}
+          ratio="portrait"
+          focalDesktop={media.samHorse.focal.desktop}
+          focalMobile={media.samHorse.focal.mobile}
+          sizes="(max-width: 768px) 100vw, 60vw"
+        />
+        <div className="flex flex-col justify-between bg-[var(--ls-forest)] p-8 text-[var(--ls-cream)] md:p-12">
           <div>
             <p className="ls-eyebrow text-white/60">The people</p>
             <h2 className="ls-display text-[clamp(3.8rem,5.5vw,6rem)]">

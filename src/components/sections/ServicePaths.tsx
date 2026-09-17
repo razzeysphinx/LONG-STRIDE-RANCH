@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+import { HorseMedia } from "@/components/media/HorseMedia";
+import { media } from "@/data/media";
 import { services } from "@/data/services";
 
 export function ServicePaths() {
@@ -7,17 +8,25 @@ export function ServicePaths() {
   return (
     <section className="ls-section">
       <div className="ls-container">
+        <div className="mb-10 grid gap-7 lg:grid-cols-[.7fr_1.3fr]">
+          <p className="ls-eyebrow">Program paths</p>
+          <p className="max-w-xl text-[17px] leading-8 text-[var(--ls-muted)]">
+            Different needs, one personal standard: every conversation begins
+            with the horse and rider in front of us.
+          </p>
+        </div>
         <div className="grid gap-4 lg:grid-cols-[1.05fr_.95fr]">
           <Link
             href={training.href}
-            className="group relative min-h-[620px] overflow-hidden rounded-[24px] text-white"
+            className="group relative min-h-[620px] overflow-hidden text-white"
           >
-            <Image
-              src={training.image}
-              alt={training.alt}
-              fill
+            <HorseMedia
+              {...media.danielleRiding}
+              ratio="horse"
+              focalDesktop={media.danielleRiding.focal.desktop}
+              focalMobile={media.danielleRiding.focal.mobile}
               sizes="(max-width: 1024px) 100vw, 55vw"
-              className="image-treatment premium-hover-image object-cover"
+              className="absolute inset-0 h-full w-full aspect-auto"
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,rgba(8,17,12,.82))]" />
             <div className="absolute inset-x-0 bottom-0 p-8 md:p-10">
@@ -34,17 +43,16 @@ export function ServicePaths() {
           <div className="grid gap-4">
             <Link
               href={boarding.href}
-              className="group grid overflow-hidden rounded-[24px] bg-[var(--ls-cream)] sm:grid-cols-[.82fr_1.18fr]"
+              className="group grid overflow-hidden bg-[var(--ls-cream)] sm:grid-cols-[.82fr_1.18fr]"
             >
-              <div className="relative min-h-[330px]">
-                <Image
-                  src={boarding.image}
-                  alt={boarding.alt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, 40vw"
-                  className="image-treatment premium-hover-image object-cover"
-                />
-              </div>
+              <HorseMedia
+                {...media.horseCare}
+                ratio="portrait"
+                focalDesktop={media.horseCare.focal.desktop}
+                focalMobile={media.horseCare.focal.mobile}
+                sizes="(max-width: 640px) 100vw, 40vw"
+                className="min-h-[330px]"
+              />
               <div className="flex flex-col justify-end p-7">
                 <p className="ls-eyebrow">{boarding.eyebrow}</p>
                 <h3 className="ls-display text-5xl">{boarding.title}</h3>
@@ -58,7 +66,7 @@ export function ServicePaths() {
             </Link>
             <Link
               href={sales.href}
-              className="group grid overflow-hidden rounded-[24px] bg-[var(--ls-forest)] text-[var(--ls-cream)] sm:grid-cols-[1.18fr_.82fr]"
+              className="group grid overflow-hidden bg-[var(--ls-forest)] text-[var(--ls-cream)] sm:grid-cols-[1.18fr_.82fr]"
             >
               <div className="flex flex-col justify-end p-7">
                 <p className="ls-eyebrow text-white/65">{sales.eyebrow}</p>
@@ -70,15 +78,14 @@ export function ServicePaths() {
                   View available horses →
                 </span>
               </div>
-              <div className="relative min-h-[330px]">
-                <Image
-                  src={sales.image}
-                  alt={sales.alt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, 40vw"
-                  className="image-treatment premium-hover-image object-cover"
-                />
-              </div>
+              <HorseMedia
+                {...media.manukaHoney}
+                ratio="portrait"
+                focalDesktop={media.manukaHoney.focal.desktop}
+                focalMobile={media.manukaHoney.focal.mobile}
+                sizes="(max-width: 640px) 100vw, 40vw"
+                className="min-h-[330px]"
+              />
             </Link>
           </div>
         </div>

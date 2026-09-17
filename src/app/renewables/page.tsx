@@ -14,6 +14,7 @@ export default function RenewablesPage() {
       <PageHero
         eyebrow="Long Stride Ranch Renewables"
         title="Upcycling equine waste."
+        variant="quiet"
       >
         A distinct conversation for municipalities, facilities and
         sustainability partners seeking a more useful path for stable waste.
@@ -23,24 +24,21 @@ export default function RenewablesPage() {
           <div>
             <p className="ls-eyebrow">The approach</p>
             <h2 className="ls-display text-[clamp(3.7rem,5.5vw,6.2rem)]">
-              From stable waste to useful products.
+              From stable waste to useful outputs.
             </h2>
             <p className="mt-7 text-sm leading-7 text-[var(--ls-muted)]">
-              Long Stride says it is expanding operations to upcycle manure and
-              used equine bedding into organic fertilizer and renewable fuels
-              using pyrolysis technology, including the production of BioChar.
+              Long Stride is exploring ways to upcycle manure and used equine
+              bedding into useful outputs using pyrolysis technology.
             </p>
           </div>
-          <div className="grid place-items-center rounded-[24px] bg-[var(--ls-sage)] p-8 text-center text-[var(--ls-forest)]">
+          <div className="grid place-items-center bg-[var(--ls-sage)] p-8 text-center text-[var(--ls-forest)] md:p-14">
             <div className="w-full max-w-md">
               <p className="ls-eyebrow">Process</p>
               <div className="font-display text-5xl">Stable waste</div>
               <div className="my-5 text-2xl">↓</div>
               <div className="font-display text-5xl">Pyrolysis</div>
               <div className="my-5 text-2xl">↓</div>
-              <div className="font-display text-5xl">
-                Biochar / renewable outputs
-              </div>
+              <div className="font-display text-5xl">Useful outputs</div>
             </div>
           </div>
         </div>
@@ -51,8 +49,8 @@ export default function RenewablesPage() {
         href="/contact?interest=Renewables"
         label="Discuss a renewables partnership"
       >
-        Get in touch to discuss the opportunity, current expansion plans and a
-        potential fit.
+        Get in touch to discuss the opportunity, current work and a potential
+        fit.
       </CTA>
     </main>
   );

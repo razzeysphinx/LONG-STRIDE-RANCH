@@ -1,5 +1,10 @@
 export type HorseStatus = "available" | "sold" | "private";
 
+export interface HorseImage {
+  src: string;
+  alt: string;
+}
+
 export interface Horse {
   id: string;
   slug: string;
@@ -8,6 +13,6 @@ export interface Horse {
   disciplines: string[];
   summary: string;
   description: string;
-  images: string[];
+  images: HorseImage[];
   featured?: boolean;
 }

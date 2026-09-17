@@ -1,21 +1,24 @@
-import Image from "next/image";
 import Link from "next/link";
+import { HorseMedia } from "@/components/media/HorseMedia";
 import { CTA } from "@/components/sections/CTA";
+import { HorseMoments } from "@/components/sections/HorseMoments";
 import { SeasonalStory } from "@/components/sections/SeasonalStory";
 import { ServicePaths } from "@/components/sections/ServicePaths";
 import { TeamFeature } from "@/components/sections/TeamFeature";
+import { media } from "@/data/media";
 
 export default function HomePage() {
   return (
     <main id="main">
       <section className="relative grid min-h-[max(700px,100svh)] items-end overflow-hidden bg-[#102018] text-white">
-        <Image
-          src="/images/hero/hero-jumping.webp"
-          alt="Horse and rider competing over fences at Long Stride Ranch"
-          fill
+        <HorseMedia
+          {...media.heroJumping}
+          ratio="cinematic"
+          focalDesktop={media.heroJumping.focal.desktop}
+          focalMobile={media.heroJumping.focal.mobile}
           priority
           sizes="100vw"
-          className="image-treatment object-cover"
+          className="absolute inset-0 h-full w-full aspect-auto"
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,17,12,.24),rgba(8,17,12,.08)_38%,rgba(8,17,12,.8)),linear-gradient(90deg,rgba(8,17,12,.5),transparent_65%)]" />
         <div className="ls-container relative z-10 pb-10 pt-36 md:pb-14 md:pt-40">
@@ -29,7 +32,7 @@ export default function HomePage() {
             <div className="max-w-md text-[15px] leading-7 text-white/80">
               <p>
                 Thoughtful horsemanship, quality horses and a personal standard
-                of care—from daily training to the show ring.
+                of care.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
@@ -40,16 +43,12 @@ export default function HomePage() {
                 </Link>
                 <Link
                   className="rounded-full border border-white/45 px-6 py-4 text-[11px] font-bold uppercase tracking-[.11em]"
-                  href="/contact"
+                  href="/about"
                 >
-                  Start an inquiry
+                  Meet Long Stride
                 </Link>
               </div>
             </div>
-          </div>
-          <div className="mt-12 flex flex-col gap-2 border-t border-white/25 pt-4 text-[10px] font-bold uppercase tracking-[.14em] sm:flex-row sm:justify-between">
-            <span>Training · Boarding · Horse Sales</span>
-            <span>Florida · Wyoming</span>
           </div>
         </div>
       </section>
@@ -67,12 +66,13 @@ export default function HomePage() {
       </section>
       <ServicePaths />
       <section className="relative min-h-[660px] overflow-hidden text-white">
-        <Image
-          src="/images/horses/competition.webp"
-          alt="Long Stride Ranch horse and rider in the show ring"
-          fill
+        <HorseMedia
+          {...media.competition}
+          ratio="cinematic"
+          focalDesktop={media.competition.focal.desktop}
+          focalMobile={media.competition.focal.mobile}
           sizes="100vw"
-          className="image-treatment object-cover"
+          className="absolute inset-0 h-full w-full aspect-auto"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,20,13,.65),transparent_70%)]" />
         <div className="ls-container relative z-10 py-36">
@@ -100,17 +100,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="ls-section">
+      <HorseMoments />
+      <section className="ls-section bg-[var(--ls-cream)]">
         <div className="ls-container grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
           <div>
             <p className="ls-eyebrow">Horsemanship</p>
             <h2 className="ls-display text-[clamp(4rem,6vw,6.5rem)]">
-              The standard is felt in the everyday work.
+              The work nobody sees.
             </h2>
           </div>
           <p className="max-w-2xl self-end text-[17px] leading-8 text-[var(--ls-muted)]">
-            Long Stride is built around the work that matters most: developing
-            horses thoughtfully, supporting riders honestly and giving every
+            The standard is felt in the everyday work: developing horses
+            thoughtfully, supporting riders honestly and giving every
             partnership the attention it deserves.
           </p>
         </div>
@@ -121,6 +122,23 @@ export default function HomePage() {
         Whether you are looking for a horse, training, boarding or a renewables
         conversation, we will help route you to the right next step.
       </CTA>
+      <section className="pb-20">
+        <div className="ls-container border-t border-[var(--ls-line)] pt-7 md:flex md:items-start md:justify-between">
+          <div>
+            <p className="ls-eyebrow">Long Stride Ranch Renewables</p>
+            <p className="max-w-xl text-sm leading-7 text-[var(--ls-muted)]">
+              A separate, practical conversation about stable waste and useful
+              outputs.
+            </p>
+          </div>
+          <Link
+            href="/renewables"
+            className="mt-5 inline-block text-[11px] font-bold uppercase tracking-[.11em] md:mt-0"
+          >
+            Explore renewables →
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

@@ -87,6 +87,31 @@ button {
 .image-treatment {
   filter: saturate(0.82) contrast(1.025);
 }
+.horse-media__image {
+  object-position: var(--media-desktop);
+  filter: saturate(0.88) contrast(1.02);
+  transition:
+    transform 900ms var(--ease-premium),
+    filter 700ms var(--ease-premium);
+}
+.horse-media:hover .horse-media__image {
+  transform: scale(1.025);
+}
+.equestrian-rule {
+  position: relative;
+  height: 1px;
+  background: var(--ls-line);
+}
+.equestrian-rule::after {
+  position: absolute;
+  top: -2px;
+  left: 18%;
+  width: 68px;
+  height: 5px;
+  border-top: 1px solid var(--ls-brass);
+  border-radius: 50%;
+  content: "";
+}
 .premium-hover-image {
   transition:
     transform 900ms var(--ease-premium),
@@ -240,6 +265,11 @@ button {
   }
   .brand-location {
     display: none;
+  }
+}
+@media (max-width: 767px) {
+  .horse-media__image {
+    object-position: var(--media-mobile);
   }
 }
 @media (prefers-reduced-motion: reduce) {

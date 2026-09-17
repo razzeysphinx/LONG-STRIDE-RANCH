@@ -112,7 +112,7 @@ export function Header() {
           </nav>
         </div>
       )}
-      {pastHero && (
+      {pastHero && !open && (
         <Link className="mobile-inquiry lg:hidden" href="/contact">
           Start an inquiry
         </Link>
