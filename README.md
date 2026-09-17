@@ -1,17 +1,29 @@
-# Long Stride Ranch V3 — Page Purpose Architecture
+# Long Stride Ranch
 
-Primary visual source: Long Stride Ranch's own public photography, altered through editorial cropping, scaling, overlays and toning.
+Premium editorial equestrian website built with Next.js App Router, TypeScript, Tailwind CSS, Next/Image, and Next/Font.
 
-Page jobs:
-- Home — orient and route.
-- About — establish trust in Sam, Danielle and the program.
-- Training & Lessons — explain fit, philosophy, expectations and inquiry.
-- Boarding — explain horse care, environment, communication and availability.
-- Our Horses — build emotional connection with program horses; not sales inventory.
-- Horse Sales — show available horses first, sold horses as history/social proof.
-- Renewables — separate the B2B sustainability story from equestrian client journeys.
-- Contact — route every inquiry into the right conversation.
+## Setup
 
-Production note:
-This concept hot-links current public Long Stride images. For production, obtain owner-approved originals and host optimized local/CDN copies.
-Do not invent horse names, amenities, lesson levels, prices, policies or availability.
+```bash
+npm install
+npm run optimize:images
+npm run dev
+```
+
+## Commands
+
+- `npm run dev` — local development
+- `npm run build` — production build
+- `npm run start` — production server
+- `npm run typecheck` — TypeScript validation
+- `npm run lint` — lint checks
+- `npm run format` / `format:check` — formatting
+- `npm run optimize:images` — create WebP derivatives from `assets/images`
+
+## Environment
+
+Copy `.env.example` to `.env.local`. `RESEND_API_KEY` and `INQUIRY_FROM_EMAIL` enable online inquiry delivery through Resend. Without them, the form reports the email fallback instead of silently dropping leads.
+
+## Content rules
+
+Only publish owner-verified horse facts, amenities, pricing, competition claims, availability, and Renewables metrics. Add horses through `src/data/horses.ts`; dynamic profiles are generated from that data.
