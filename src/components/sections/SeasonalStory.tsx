@@ -1,14 +1,15 @@
 import { HorseMedia } from "@/components/media/HorseMedia";
 import { media } from "@/data/media";
+
 export function SeasonalStory() {
   return (
     <section className="ls-section bg-[var(--ls-cream)]">
       <div className="ls-container grid items-center gap-8 lg:grid-cols-[.88fr_1.12fr]">
         <HorseMedia
-          {...media.horsePortrait}
+          {...media.horseCare}
           ratio="portrait"
-          focalDesktop={media.horsePortrait.focal.desktop}
-          focalMobile={media.horsePortrait.focal.mobile}
+          focalDesktop={media.horseCare.focal.desktop}
+          focalMobile={media.horseCare.focal.mobile}
           sizes="(max-width: 1024px) 100vw, 45vw"
         />
         <div className="px-1 lg:px-12">

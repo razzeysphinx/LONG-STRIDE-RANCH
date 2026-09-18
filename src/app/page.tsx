@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { HorseMedia } from "@/components/media/HorseMedia";
+import { FullBleedMedia } from "@/components/media/FullBleedMedia";
 import { CTA } from "@/components/sections/CTA";
 import { HorseMoments } from "@/components/sections/HorseMoments";
+import { HorsesTeaser } from "@/components/sections/HorsesTeaser";
 import { SeasonalStory } from "@/components/sections/SeasonalStory";
 import { ServicePaths } from "@/components/sections/ServicePaths";
 import { TeamFeature } from "@/components/sections/TeamFeature";
@@ -10,22 +11,20 @@ import { media } from "@/data/media";
 export default function HomePage() {
   return (
     <main id="main">
-      <section className="relative grid min-h-[max(700px,100svh)] items-end overflow-hidden bg-[#102018] text-white">
-        <HorseMedia
+      {/* 01 HORSE HERO */}
+      <section className="relative min-h-[100svh] overflow-hidden bg-[#102018] text-white">
+        <FullBleedMedia
           {...media.heroJumping}
-          ratio="cinematic"
           focalDesktop={media.heroJumping.focal.desktop}
           focalMobile={media.heroJumping.focal.mobile}
           priority
-          sizes="100vw"
-          className="absolute inset-0 h-full w-full aspect-auto"
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,17,12,.24),rgba(8,17,12,.08)_38%,rgba(8,17,12,.8)),linear-gradient(90deg,rgba(8,17,12,.5),transparent_65%)]" />
-        <div className="ls-container relative z-10 pb-10 pt-36 md:pb-14 md:pt-40">
-          <div className="grid items-end gap-8 lg:grid-cols-[1.25fr_.75fr]">
+        <div className="ls-container relative z-10 flex min-h-[100svh] items-end pb-12 pt-36 md:pb-16 md:pt-40">
+          <div className="grid w-full items-end gap-8 lg:grid-cols-[1.25fr_.75fr]">
             <div>
               <p className="ls-eyebrow">Wellington · Jackson Hole</p>
-              <h1 className="ls-display max-w-5xl text-[var(--type-hero)]">
+              <h1 className="ls-display max-w-5xl text-[var(--type-home-hero)]">
                 Built for the <em className="font-normal">long stride.</em>
               </h1>
             </div>
@@ -52,6 +51,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 02 POSITIONING */}
       <section className="bg-[var(--ls-forest)] py-12 text-[var(--ls-cream)] md:py-14">
         <div className="ls-container grid gap-3 md:grid-cols-[.4fr_1fr_.8fr]">
           <p className="ls-eyebrow mb-0">Long Stride Ranch</p>
@@ -64,15 +65,16 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      {/* 03 TRAINING / BOARDING / SALES */}
       <ServicePaths />
+
+      {/* 04 MANUKA HONEY FEATURED HORSE */}
       <section className="relative min-h-[660px] overflow-hidden text-white">
-        <HorseMedia
+        <FullBleedMedia
           {...media.manukaHoney}
-          ratio="cinematic"
           focalDesktop={media.manukaHoney.focal.desktop}
           focalMobile={media.manukaHoney.focal.mobile}
-          sizes="100vw"
-          className="absolute inset-0 h-full w-full aspect-auto"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,20,13,.65),transparent_70%)]" />
         <div className="ls-container relative z-10 py-36">
@@ -100,7 +102,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 05 HORSE MOMENTS */}
       <HorseMoments />
+
+      {/* 06 HORSEMANSHIP */}
       <section className="bg-[var(--ls-cream)] py-28 md:py-40">
         <div className="ls-container grid gap-12 lg:grid-cols-[.65fr_1.35fr]">
           <p className="ls-eyebrow">Horsemanship</p>
@@ -115,28 +121,23 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 07 PEOPLE */}
       <TeamFeature />
-      <section className="ls-section bg-[var(--ls-paper)]">
-        <div className="ls-container grid gap-8 border-t border-[var(--ls-line)] pt-8 lg:grid-cols-[.65fr_1.35fr]">
-          <p className="ls-eyebrow">Our Horses</p>
-          <div>
-            <h2 className="ls-display max-w-4xl text-[var(--type-section)]">
-              Every partnership starts with the individual horse.
-            </h2>
-            <Link
-              className="mt-7 inline-flex text-[11px] font-bold uppercase tracking-[.11em]"
-              href="/horses"
-            >
-              Meet the horses →
-            </Link>
-          </div>
-        </div>
-      </section>
+
+      {/* 08 OUR HORSES */}
+      <HorsesTeaser />
+
+      {/* 09 SEASONAL STORY */}
       <SeasonalStory />
+
+      {/* 10 INQUIRY */}
       <CTA eyebrow="Start a conversation" title="Tell us what you need.">
         Whether you are looking for a horse, training, boarding or a renewables
         conversation, we will help route you to the right next step.
       </CTA>
+
+      {/* 11 RENEWABLES */}
       <section className="pb-20">
         <div className="ls-container border-t border-[var(--ls-line)] pt-7 md:flex md:items-start md:justify-between">
           <div>

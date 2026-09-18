@@ -1,17 +1,17 @@
 export type HorseStatus = "available" | "sold" | "private";
 
-export interface HorseImage {
+export type HorseImage = {
   src: string;
   alt: string;
   focalDesktop?: string;
   focalMobile?: string;
   ratio?: "portrait" | "horse" | "action" | "sales" | "landscape" | "square";
-}
+};
 
-export interface HorseVideo {
+export type HorseVideo = {
   url: string;
   title: string;
-}
+};
 
 export interface Horse {
   id: string;
@@ -29,8 +29,8 @@ export interface Horse {
   description: string;
   temperament?: string;
   idealRider?: string;
-  showExperience?: string;
   trainingHistory?: string;
+  showExperience?: string;
   images: HorseImage[];
   videos?: HorseVideo[];
   featured?: boolean;

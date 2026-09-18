@@ -1,19 +1,25 @@
-import Link from "next/link";
-import { HorseMedia } from "@/components/media/HorseMedia";
+import { SalesFeature } from "@/components/horses/SalesFeature";
 import { CTA } from "@/components/sections/CTA";
 import { PageHero } from "@/components/sections/PageHero";
 import { horses } from "@/data/horses";
 import { media } from "@/data/media";
 import { pageMetadata } from "@/lib/metadata";
+
 export const metadata = pageMetadata({
   title: "Horse Sales",
   description: "Explore the current horse sales offering at Long Stride Ranch.",
   path: "/horse-sales",
   image: media.manukaHoney.src,
 });
+
 export default function HorseSalesPage() {
+  const availableHorses = horses.filter(
+    (horse) => horse.status === "available",
+  );
+
   return (
     <main id="main">
+      {/* 01 HERO */}
       <PageHero
         eyebrow="Horse Sales"
         title="A considered offering."
@@ -23,54 +29,56 @@ export default function HorseSalesPage() {
           focalMobile: media.manukaHoney.focal.mobile,
         }}
       >
-        Long Stride offers a limited number of quality horses and ponies. Start
-        with verified availability and a qualified purchase conversation.
+        Long Stride represents a limited number of horses. Each horse is
+        represented with clear knowledge of their character, development and the
+        rider partnership that suits them best.
       </PageHero>
-      <section className="ls-section">
+
+      {/* 02 CURATED FEATURED HORSES */}
+      <section className="py-20 md:py-28">
         <div className="ls-container">
-          <div className="mb-12 grid gap-8 lg:grid-cols-[.65fr_1.35fr]">
-            <p className="ls-eyebrow">Currently offered</p>
+          <div className="mb-12 grid gap-6 lg:grid-cols-[.65fr_1.35fr]">
+            <p className="ls-eyebrow">Curated offering</p>
             <p className="max-w-xl text-[17px] leading-8 text-[var(--ls-muted)]">
-              Each horse deserves a considered conversation about their
-              strengths, the rider, and the next partnership.
+              Long Stride offers a limited number of quality horses and ponies.
+              Start with verified availability and a qualified purchase
+              conversation.
             </p>
           </div>
-          {horses
-            .filter((horse) => horse.status === "available")
-            .map((horse) => (
-              <article
-                key={horse.id}
-                className="grid gap-8 border-t border-[var(--ls-line)] pt-5 lg:grid-cols-[1fr_.8fr]"
-              >
-                <HorseMedia
-                  src={horse.images[0].src}
-                  alt={horse.images[0].alt}
-                  ratio="horse"
-                  focalDesktop={media.manukaHoney.focal.desktop}
-                  focalMobile={media.manukaHoney.focal.mobile}
-                  sizes="(max-width:1024px) 100vw, 60vw"
-                />
-                <div className="flex flex-col justify-end pb-7">
-                  <p className="ls-eyebrow">
-                    Available · {horse.disciplines[0]}
-                  </p>
-                  <h2 className="ls-display text-[clamp(4rem,6vw,6.7rem)]">
-                    {horse.name}
-                  </h2>
-                  <p className="mt-5 max-w-xl text-sm leading-7 text-[var(--ls-muted)]">
-                    {horse.summary}
-                  </p>
-                  <Link
-                    className="mt-7 inline-flex w-fit rounded-full bg-[var(--ls-forest)] px-6 py-4 text-[11px] font-bold uppercase tracking-[.11em] text-white"
-                    href={`/horse-sales/${horse.slug}`}
-                  >
-                    View profile
-                  </Link>
-                </div>
-              </article>
+          <div className="space-y-16">
+            {availableHorses.map((horse) => (
+              <SalesFeature key={horse.id} horse={horse} />
             ))}
+          </div>
         </div>
       </section>
+
+      {/* 03 FINDING A FIT */}
+      <section className="bg-[var(--ls-cream)] py-28 md:py-40">
+        <div className="ls-container grid gap-12 lg:grid-cols-[.65fr_1.35fr]">
+          <p className="ls-eyebrow">Finding a fit</p>
+          <div>
+            <h2 className="ls-display max-w-4xl text-[var(--type-editorial)]">
+              The right horse is only half the match.
+            </h2>
+            <div className="mt-12 grid border-t border-[var(--ls-line)] sm:grid-cols-2">
+              {["Horse", "Rider", "Temperament", "Goals"].map((item, index) => (
+                <div
+                  key={item}
+                  className="border-b border-[var(--ls-line)] py-6"
+                >
+                  <span className="mr-5 text-xs text-[var(--ls-brass)]">
+                    0{index + 1}
+                  </span>
+                  <span className="font-display text-3xl">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 04 BUYER INQUIRY */}
       <CTA
         eyebrow="Buyer inquiry"
         title="Tell us about the rider."

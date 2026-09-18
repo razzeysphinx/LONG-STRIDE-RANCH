@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FullBleedMedia } from "@/components/media/FullBleedMedia";
 import { HorseMedia } from "@/components/media/HorseMedia";
 import { media } from "@/data/media";
 import { services } from "@/data/services";
@@ -20,13 +21,12 @@ export function ServicePaths() {
             href={training.href}
             className="group relative min-h-[620px] overflow-hidden text-white"
           >
-            <HorseMedia
+            <FullBleedMedia
               {...media.danielleRiding}
-              ratio="horse"
               focalDesktop={media.danielleRiding.focal.desktop}
               focalMobile={media.danielleRiding.focal.mobile}
               sizes="(max-width: 1024px) 100vw, 55vw"
-              className="absolute inset-0 h-full w-full aspect-auto"
+              imageClassName="premium-hover-image"
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,rgba(8,17,12,.82))]" />
             <div className="absolute inset-x-0 bottom-0 p-8 md:p-10">

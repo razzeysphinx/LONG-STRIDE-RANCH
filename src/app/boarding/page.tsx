@@ -2,6 +2,7 @@ import { CTA } from "@/components/sections/CTA";
 import { PageHero } from "@/components/sections/PageHero";
 import { media } from "@/data/media";
 import { pageMetadata } from "@/lib/metadata";
+
 export const metadata = pageMetadata({
   title: "Boarding",
   description:
@@ -9,27 +10,30 @@ export const metadata = pageMetadata({
   path: "/boarding",
   image: media.horseCare.src,
 });
+
 const rows = [
-  [
-    "Care",
-    "Ask Long Stride about the individual care considerations relevant to your horse.",
-  ],
-  [
-    "Environment",
-    "See the barn and horse lifestyle through the ranch’s own imagery and a personal conversation.",
-  ],
-  [
-    "Communication",
-    "Discuss how boarding connects with training and the practical needs of your horse.",
-  ],
-  [
-    "Training connection",
-    "Discuss the support that makes sense for the horse and rider in front of you.",
-  ],
+  {
+    title: "Care",
+    copy: "Ask Long Stride about the individual care considerations relevant to your horse.",
+  },
+  {
+    title: "Environment",
+    copy: "See the barn and horse lifestyle through the ranch’s own imagery and a personal conversation.",
+  },
+  {
+    title: "Communication",
+    copy: "Discuss how boarding connects with training and the practical needs of your horse.",
+  },
+  {
+    title: "Training connection",
+    copy: "Discuss the support that makes sense for the horse and rider in front of you.",
+  },
 ];
+
 export default function BoardingPage() {
   return (
     <main id="main">
+      {/* 01 HERO */}
       <PageHero
         eyebrow="Boarding"
         title="Your horse is noticed here."
@@ -42,7 +46,9 @@ export default function BoardingPage() {
         Care is not simply where a horse stays. It is the attention around the
         everyday.
       </PageHero>
-      <section className="ls-section bg-[var(--ls-cream)]">
+
+      {/* 02 CARE PHILOSOPHY */}
+      <section className="bg-[var(--ls-cream)] py-24 md:py-36">
         <div className="ls-container grid gap-12 lg:grid-cols-[.72fr_1.28fr]">
           <p className="ls-eyebrow">Care philosophy</p>
           <div>
@@ -57,19 +63,23 @@ export default function BoardingPage() {
           </div>
         </div>
       </section>
-      <section className="ls-section">
+
+      {/* 03 AROUND THE EVERYDAY */}
+      <section className="py-24 md:py-36">
         <div className="ls-container">
           <p className="ls-eyebrow">Around the everyday</p>
-          <div className="mt-5 border-t border-[var(--ls-line)]">
-            {rows.map(([title, copy], index) => (
+          <div className="mt-8 border-t border-[var(--ls-line)]">
+            {rows.map(({ title, copy }, index) => (
               <article
                 key={title}
-                className="grid gap-4 border-b border-[var(--ls-line)] py-8 md:grid-cols-[.15fr_.45fr_1fr]"
+                className="grid gap-4 border-b border-[var(--ls-line)] py-9 md:grid-cols-[100px_280px_1fr] md:items-baseline md:py-11"
               >
                 <span className="font-display text-2xl text-[var(--ls-brass)]">
                   0{index + 1}
                 </span>
-                <h2 className="font-display text-4xl leading-none">{title}</h2>
+                <h2 className="font-display text-3xl leading-none md:text-4xl">
+                  {title}
+                </h2>
                 <p className="max-w-xl text-sm leading-7 text-[var(--ls-muted)]">
                   {copy}
                 </p>
@@ -78,6 +88,8 @@ export default function BoardingPage() {
           </div>
         </div>
       </section>
+
+      {/* 04 AVAILABILITY CTA */}
       <CTA
         eyebrow="Availability"
         title="Ask about a place at Long Stride."

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer id="site-footer" className="bg-[#102018] py-14 text-white/70">
+    <footer id="site-footer" className="bg-[#102018] py-16 text-white/80">
       <div className="ls-container">
         <div className="grid gap-10 md:grid-cols-[1.4fr_.7fr_.7fr]">
           <div>
@@ -13,7 +13,7 @@ export function Footer() {
                 <span className="brand-location">Equestrian · Renewables</span>
               </span>
             </Link>
-            <p className="mt-5 max-w-sm text-sm">
+            <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-white/75">
               Thoughtful horsemanship, quality horses and a personal standard of
               care.
             </p>
@@ -32,7 +32,7 @@ export function Footer() {
             <FooterLink href="/contact">Contact</FooterLink>
           </div>
         </div>
-        <div className="mt-10 flex flex-col justify-between gap-2 border-t border-white/15 pt-5 text-[10px] uppercase tracking-[.12em] sm:flex-row">
+        <div className="mt-12 flex flex-col justify-between gap-2 border-t border-white/15 pt-6 text-[11px] uppercase tracking-[.14em] text-white/60 sm:flex-row">
           <span>© {new Date().getFullYear()} Long Stride Ranch</span>
           <span>Wellington, Florida · Jackson Hole, Wyoming</span>
         </div>
@@ -40,6 +40,7 @@ export function Footer() {
     </footer>
   );
 }
+
 function FooterLink({
   href,
   children,
@@ -49,7 +50,7 @@ function FooterLink({
 }) {
   return (
     <Link
-      className="mb-2 block text-sm transition-colors hover:text-white"
+      className="mb-2.5 block text-[15px] text-white/70 transition-colors hover:text-white"
       href={href}
     >
       {children}

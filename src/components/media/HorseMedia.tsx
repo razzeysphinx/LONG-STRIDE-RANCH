@@ -2,16 +2,9 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 
 export type HorseMediaRatio =
-  | "cinematic"
-  | "action"
-  | "portrait"
-  | "horse"
-  | "sales"
-  | "square"
-  | "landscape";
+  "action" | "portrait" | "horse" | "sales" | "square" | "landscape";
 
 const ratioClasses: Record<HorseMediaRatio, string> = {
-  cinematic: "aspect-[4/5] md:aspect-[16/9]",
   action: "aspect-[4/5] md:aspect-[3/2]",
   portrait: "aspect-[4/5]",
   horse: "aspect-[4/5] md:aspect-[5/6]",
