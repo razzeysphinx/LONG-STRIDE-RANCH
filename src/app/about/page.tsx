@@ -1,5 +1,4 @@
 import { CTA } from "@/components/sections/CTA";
-import { HorseMedia } from "@/components/media/HorseMedia";
 import { PageHero } from "@/components/sections/PageHero";
 import { TeamEditorial } from "@/components/sections/TeamEditorial";
 import { media } from "@/data/media";
@@ -9,7 +8,7 @@ export const metadata = pageMetadata({
   title: "About",
   description: "Meet the people and philosophy behind Long Stride Ranch.",
   path: "/about",
-  image: media.danielleRiding.src,
+  image: media.competition.src,
 });
 export default function AboutPage() {
   const [danielle, sam] = team;
@@ -19,9 +18,9 @@ export default function AboutPage() {
         eyebrow="About Long Stride"
         title="The people behind the program."
         image={{
-          ...media.danielleRiding,
-          focalDesktop: media.danielleRiding.focal.desktop,
-          focalMobile: media.danielleRiding.focal.mobile,
+          ...media.competition,
+          focalDesktop: media.competition.focal.desktop,
+          focalMobile: media.competition.focal.mobile,
         }}
       >
         Long Stride brings equestrian experience, operational care and a
@@ -51,18 +50,9 @@ export default function AboutPage() {
         focalDesktop={media.danielleRiding.focal.desktop}
         focalMobile={media.danielleRiding.focal.mobile}
       />
-      <section className="relative min-h-[440px] overflow-hidden">
-        <HorseMedia
-          {...media.competition}
-          ratio="cinematic"
-          focalDesktop={media.competition.focal.desktop}
-          focalMobile={media.competition.focal.mobile}
-          sizes="100vw"
-          className="absolute inset-0 h-full w-full aspect-auto"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,17,12,.55),transparent)]" />
-        <div className="ls-container relative z-10 flex min-h-[440px] items-end py-14 text-white">
-          <p className="ls-display max-w-3xl text-[clamp(3.5rem,6vw,6.6rem)]">
+      <section className="bg-[var(--ls-forest)] py-24 text-white md:py-32">
+        <div className="ls-container">
+          <p className="ls-display max-w-3xl text-[var(--type-editorial)]">
             Every detail returns to the horse.
           </p>
         </div>

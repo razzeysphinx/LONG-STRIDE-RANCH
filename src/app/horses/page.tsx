@@ -34,18 +34,11 @@ export default function HorsesPage() {
               focalMobile={media.showJumping.focal.mobile}
               className="md:col-span-7"
             />
-            <HorseMedia
-              {...media.horsePortrait}
-              ratio="portrait"
-              focalDesktop={media.horsePortrait.focal.desktop}
-              focalMobile={media.horsePortrait.focal.mobile}
-              className="md:col-span-5 md:mt-20"
-            />
-            <div className="flex min-h-[420px] items-end bg-[var(--ls-forest)] p-8 text-[var(--ls-cream)] md:col-span-5 md:p-12">
+            <div className="flex min-h-[420px] items-end bg-[var(--ls-forest)] p-8 text-[var(--ls-cream)] md:col-span-5 md:mt-20 md:p-12">
               <div>
-                <p className="ls-eyebrow text-white/60">The program</p>
-                <h2 className="ls-display text-[clamp(3.5rem,5.5vw,6rem)]">
-                  At home, in training and in the ring.
+                <p className="ls-eyebrow text-white/60">The work</p>
+                <h2 className="ls-display text-[var(--type-editorial)]">
+                  Every horse asks for a different kind of attention.
                 </h2>
               </div>
             </div>

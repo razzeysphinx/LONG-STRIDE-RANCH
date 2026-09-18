@@ -25,7 +25,7 @@ export default function HomePage() {
           <div className="grid items-end gap-8 lg:grid-cols-[1.25fr_.75fr]">
             <div>
               <p className="ls-eyebrow">Wellington · Jackson Hole</p>
-              <h1 className="ls-display max-w-5xl text-[clamp(4.5rem,10vw,10rem)]">
+              <h1 className="ls-display max-w-5xl text-[var(--type-hero)]">
                 Built for the <em className="font-normal">long stride.</em>
               </h1>
             </div>
@@ -52,7 +52,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="bg-[var(--ls-forest)] py-9 text-[var(--ls-cream)]">
+      <section className="bg-[var(--ls-forest)] py-12 text-[var(--ls-cream)] md:py-14">
         <div className="ls-container grid gap-3 md:grid-cols-[.4fr_1fr_.8fr]">
           <p className="ls-eyebrow mb-0">Long Stride Ranch</p>
           <p className="font-display text-3xl leading-tight">
@@ -67,10 +67,10 @@ export default function HomePage() {
       <ServicePaths />
       <section className="relative min-h-[660px] overflow-hidden text-white">
         <HorseMedia
-          {...media.competition}
+          {...media.manukaHoney}
           ratio="cinematic"
-          focalDesktop={media.competition.focal.desktop}
-          focalMobile={media.competition.focal.mobile}
+          focalDesktop={media.manukaHoney.focal.desktop}
+          focalMobile={media.manukaHoney.focal.mobile}
           sizes="100vw"
           className="absolute inset-0 h-full w-full aspect-auto"
         />
@@ -101,23 +101,38 @@ export default function HomePage() {
         </div>
       </section>
       <HorseMoments />
-      <section className="ls-section bg-[var(--ls-cream)]">
-        <div className="ls-container grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
+      <section className="bg-[var(--ls-cream)] py-28 md:py-40">
+        <div className="ls-container grid gap-12 lg:grid-cols-[.65fr_1.35fr]">
+          <p className="ls-eyebrow">Horsemanship</p>
           <div>
-            <p className="ls-eyebrow">Horsemanship</p>
-            <h2 className="ls-display text-[clamp(4rem,6vw,6.5rem)]">
-              The work nobody sees.
+            <h2 className="ls-display max-w-5xl text-[var(--type-editorial)]">
+              The work nobody sees is often the work that matters most.
             </h2>
+            <p className="mt-8 max-w-xl text-[17px] leading-8 text-[var(--ls-muted)]">
+              Before the round, before the lesson and before the result, there
+              is attention, repetition, care and trust.
+            </p>
           </div>
-          <p className="max-w-2xl self-end text-[17px] leading-8 text-[var(--ls-muted)]">
-            The standard is felt in the everyday work: developing horses
-            thoughtfully, supporting riders honestly and giving every
-            partnership the attention it deserves.
-          </p>
+        </div>
+      </section>
+      <TeamFeature />
+      <section className="ls-section bg-[var(--ls-paper)]">
+        <div className="ls-container grid gap-8 border-t border-[var(--ls-line)] pt-8 lg:grid-cols-[.65fr_1.35fr]">
+          <p className="ls-eyebrow">Our Horses</p>
+          <div>
+            <h2 className="ls-display max-w-4xl text-[var(--type-section)]">
+              Every partnership starts with the individual horse.
+            </h2>
+            <Link
+              className="mt-7 inline-flex text-[11px] font-bold uppercase tracking-[.11em]"
+              href="/horses"
+            >
+              Meet the horses →
+            </Link>
+          </div>
         </div>
       </section>
       <SeasonalStory />
-      <TeamFeature />
       <CTA eyebrow="Start a conversation" title="Tell us what you need.">
         Whether you are looking for a horse, training, boarding or a renewables
         conversation, we will help route you to the right next step.

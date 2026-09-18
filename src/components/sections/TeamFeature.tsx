@@ -3,19 +3,20 @@ import { HorseMedia } from "@/components/media/HorseMedia";
 import { media } from "@/data/media";
 export function TeamFeature() {
   return (
-    <section className="ls-section">
-      <div className="ls-container grid gap-4 md:grid-cols-[1.1fr_.9fr]">
+    <section className="py-28 md:py-40">
+      <div className="ls-container grid gap-4 lg:grid-cols-12">
         <HorseMedia
-          {...media.samHorse}
+          {...media.danielleRiding}
           ratio="portrait"
-          focalDesktop={media.samHorse.focal.desktop}
-          focalMobile={media.samHorse.focal.mobile}
-          sizes="(max-width: 768px) 100vw, 60vw"
+          focalDesktop={media.danielleRiding.focal.desktop}
+          focalMobile={media.danielleRiding.focal.mobile}
+          sizes="(max-width: 1024px) 100vw, 42vw"
+          className="lg:col-span-5"
         />
-        <div className="flex flex-col justify-between bg-[var(--ls-forest)] p-8 text-[var(--ls-cream)] md:p-12">
+        <div className="flex flex-col justify-between bg-[var(--ls-forest)] p-8 text-[var(--ls-cream)] md:p-12 lg:col-span-4">
           <div>
             <p className="ls-eyebrow text-white/60">The people</p>
-            <h2 className="ls-display text-[clamp(3.8rem,5.5vw,6rem)]">
+            <h2 className="ls-display text-[var(--type-editorial)]">
               Experience feels personal here.
             </h2>
           </div>
@@ -33,6 +34,14 @@ export function TeamFeature() {
             </Link>
           </div>
         </div>
+        <HorseMedia
+          {...media.samHorse}
+          ratio="portrait"
+          focalDesktop={media.samHorse.focal.desktop}
+          focalMobile={media.samHorse.focal.mobile}
+          sizes="(max-width: 1024px) 100vw, 33vw"
+          className="lg:col-span-3"
+        />
       </div>
     </section>
   );

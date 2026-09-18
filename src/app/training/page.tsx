@@ -70,7 +70,7 @@ export default function TrainingPage() {
             {rhythm.map(([number, title, copy]) => (
               <article
                 key={number}
-                className="grid gap-4 border-b border-[var(--ls-line)] py-7 md:grid-cols-[.15fr_.35fr_1fr]"
+                className="grid gap-4 border-b border-[var(--ls-line)] py-9 md:grid-cols-[.15fr_.35fr_1fr] md:py-11"
               >
                 <span className="font-display text-3xl text-[var(--ls-brass)]">
                   {number}
@@ -84,14 +84,6 @@ export default function TrainingPage() {
           </div>
         </div>
       </section>
-      <HorseMedia
-        {...media.showJumping}
-        ratio="cinematic"
-        focalDesktop={media.showJumping.focal.desktop}
-        focalMobile={media.showJumping.focal.mobile}
-        sizes="100vw"
-        className="w-full"
-      />
       <section className="ls-section">
         <div className="ls-container grid gap-8 md:grid-cols-3">
           {[

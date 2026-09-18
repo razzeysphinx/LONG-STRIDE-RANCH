@@ -18,7 +18,7 @@ export function HorseMoments() {
             </p>
           </div>
         </div>
-        <div className="grid gap-3 md:grid-cols-12">
+        <div className="grid gap-4 md:grid-cols-12 md:gap-5">
           <HorseMedia
             {...media.horseCare}
             ratio="portrait"

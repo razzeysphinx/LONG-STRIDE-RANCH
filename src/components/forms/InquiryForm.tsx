@@ -6,9 +6,9 @@ const interests = [
   "Horse Purchase",
   "Training",
   "Boarding",
-  "Visit",
+  "Schedule a Visit",
   "Renewables",
-  "General",
+  "General Inquiry",
 ];
 
 export function InquiryForm({
@@ -93,14 +93,6 @@ export function InquiryForm({
         <div className="field">
           <label htmlFor="phone">Phone</label>
           <input id="phone" name="phone" type="tel" autoComplete="tel" />
-        </div>
-        <div className="field">
-          <label htmlFor="location">Preferred location</label>
-          <select id="location" name="preferredLocation">
-            <option>Wellington / Loxahatchee, FL</option>
-            <option>Jackson Hole, WY</option>
-            <option>Not sure</option>
-          </select>
         </div>
         {interest === "Horse Purchase" && (
           <>

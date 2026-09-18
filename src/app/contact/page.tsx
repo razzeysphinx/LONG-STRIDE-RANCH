@@ -1,4 +1,3 @@
-import { HorseMedia } from "@/components/media/HorseMedia";
 import { InquiryForm } from "@/components/forms/InquiryForm";
 import { PageHero } from "@/components/sections/PageHero";
 import { media } from "@/data/media";
@@ -30,21 +29,15 @@ export default async function ContactPage({
         Tell Long Stride why you are reaching out so the team has useful context
         from the first message.
       </PageHero>
-      <section className="ls-section">
-        <div className="ls-container grid gap-12 lg:grid-cols-[.75fr_1.25fr]">
+      <section className="py-24 md:py-32">
+        <div className="ls-container grid gap-14 lg:grid-cols-[.65fr_1.35fr]">
           <div>
-            <HorseMedia
-              {...media.horseCare}
-              ratio="portrait"
-              focalDesktop={media.horseCare.focal.desktop}
-              focalMobile={media.horseCare.focal.mobile}
-            />
+            <p className="ls-eyebrow">Reach Long Stride</p>
+            <h2 className="ls-display text-[var(--type-editorial)]">
+              Visit by appointment.
+            </h2>
             <div className="mt-8">
-              <p className="ls-eyebrow">Reach Long Stride</p>
-              <h2 className="ls-display text-[clamp(3.6rem,6vw,6.2rem)]">
-                Visit by appointment.
-              </h2>
-              <div className="mt-8 border-t border-[var(--ls-line)] py-5 text-sm">
+              <div className="border-t border-[var(--ls-line)] py-5 text-sm">
                 <p>
                   851 Hyde Park Rd
                   <br />

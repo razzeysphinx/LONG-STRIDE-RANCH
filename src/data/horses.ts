@@ -15,6 +15,9 @@ export const horses: Horse[] = [
       {
         src: "/images/sales/manuka-honey.webp",
         alt: "Manuka Honey jumping in the show ring",
+        focalDesktop: "50% 45%",
+        focalMobile: "57% 38%",
+        ratio: "sales",
       },
     ],
     featured: true,

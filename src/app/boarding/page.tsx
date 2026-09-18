@@ -1,4 +1,3 @@
-import { HorseMedia } from "@/components/media/HorseMedia";
 import { CTA } from "@/components/sections/CTA";
 import { PageHero } from "@/components/sections/PageHero";
 import { media } from "@/data/media";
@@ -44,24 +43,18 @@ export default function BoardingPage() {
         everyday.
       </PageHero>
       <section className="ls-section bg-[var(--ls-cream)]">
-        <div className="ls-container grid gap-12 lg:grid-cols-[.85fr_1.15fr]">
+        <div className="ls-container grid gap-12 lg:grid-cols-[.72fr_1.28fr]">
+          <p className="ls-eyebrow">Care philosophy</p>
           <div>
-            <p className="ls-eyebrow">Care philosophy</p>
-            <h2 className="ls-display text-[clamp(3.7rem,5.5vw,6rem)]">
+            <h2 className="ls-display max-w-4xl text-[var(--type-editorial)]">
               The details are part of the care.
             </h2>
-            <p className="mt-7 text-sm leading-7 text-[var(--ls-muted)]">
+            <p className="mt-7 max-w-xl text-[16px] leading-8 text-[var(--ls-muted)]">
               Long Stride puts a personal standard around the daily environment
-              of each horse. The team can share current program details and
-              availability directly with owners.
+              of each horse. Current care arrangements and availability can be
+              discussed directly with the team.
             </p>
           </div>
-          <HorseMedia
-            {...media.horseCare}
-            ratio="portrait"
-            focalDesktop={media.horseCare.focal.desktop}
-            focalMobile={media.horseCare.focal.mobile}
-          />
         </div>
       </section>
       <section className="ls-section">

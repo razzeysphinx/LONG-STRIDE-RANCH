@@ -36,7 +36,7 @@ export function PageHero({
           <div className="grid w-full gap-8 lg:grid-cols-[1.2fr_.8fr] lg:items-end">
             <div>
               <p className="ls-eyebrow text-white/65">{eyebrow}</p>
-              <h1 className="ls-display max-w-[1000px] text-[clamp(4rem,9vw,9rem)]">
+              <h1 className="ls-display max-w-[1000px] text-[var(--type-hero)]">
                 {title}
               </h1>
             </div>
@@ -54,7 +54,7 @@ export function PageHero({
         <div className="ls-container grid items-end gap-10 lg:grid-cols-[.9fr_1.1fr]">
           <div className="pb-14 lg:pb-20">
             <p className="ls-eyebrow">{eyebrow}</p>
-            <h1 className="ls-display max-w-3xl text-[clamp(4rem,7.5vw,8rem)]">
+            <h1 className="ls-display max-w-3xl text-[var(--type-page)]">
               {title}
             </h1>
             <div className="mt-7 max-w-xl text-[15px] leading-7 text-[var(--ls-muted)]">
@@ -79,7 +79,7 @@ export function PageHero({
       <div className="ls-container grid items-end gap-10 md:grid-cols-[1.15fr_.85fr]">
         <div>
           <p className="ls-eyebrow">{eyebrow}</p>
-          <h1 className="ls-display max-w-4xl text-[clamp(4rem,8.2vw,8.6rem)]">
+          <h1 className="ls-display max-w-4xl text-[var(--type-page)]">
             {title}
           </h1>
         </div>

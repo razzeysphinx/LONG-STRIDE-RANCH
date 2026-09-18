@@ -12,6 +12,17 @@
   --ls-line: rgba(23, 35, 29, 0.13);
   --ls-max: 1320px;
   --ease-premium: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --type-hero: clamp(4.5rem, 9vw, 9rem);
+  --type-page: clamp(3.8rem, 7vw, 7.4rem);
+  --type-editorial: clamp(3.4rem, 5.5vw, 6rem);
+  --type-section: clamp(2.6rem, 4vw, 4.5rem);
+  --type-subhead: clamp(1.75rem, 2.5vw, 2.6rem);
+  --space-xs: 24px;
+  --space-sm: 40px;
+  --space-md: 64px;
+  --space-lg: 96px;
+  --space-xl: 128px;
+  --space-2xl: 160px;
 }
 * {
   box-sizing: border-box;
@@ -82,7 +93,7 @@ button {
   line-height: 0.91;
 }
 .ls-section {
-  padding-block: clamp(82px, 9vw, 144px);
+  padding-block: clamp(80px, 8vw, 128px);
 }
 .image-treatment {
   filter: saturate(0.82) contrast(1.025);
@@ -206,7 +217,7 @@ button {
   position: fixed;
   z-index: 40;
   right: 14px;
-  bottom: 14px;
+  bottom: calc(14px + env(safe-area-inset-bottom));
   border-radius: 999px;
   padding: 13px 17px;
   background: var(--ls-forest);
