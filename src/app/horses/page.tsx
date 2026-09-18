@@ -1,6 +1,6 @@
 import { FullBleedMedia } from "@/components/media/FullBleedMedia";
 import { HorseMedia } from "@/components/media/HorseMedia";
-import { CTA } from "@/components/sections/CTA";
+import { EditorialCTA } from "@/components/sections/cta/EditorialCTA";
 import { PageHero } from "@/components/sections/PageHero";
 import { media } from "@/data/media";
 import { pageMetadata } from "@/lib/metadata";
@@ -96,16 +96,16 @@ export default function HorsesPage() {
         </div>
       </section>
 
-      {/* 05 CTA */}
-      <CTA
-        eyebrow="Looking for a partner?"
+      {/* 05 EDITORIAL CTA TO SALES */}
+      <EditorialCTA
+        eyebrow="Looking for your next partner?"
         title="Meet the horses offered at Long Stride."
         href="/horse-sales"
         label="View horse sales"
       >
         Explore currently available horses and ponies, or discuss what you hope
         to find in your next partnership.
-      </CTA>
+      </EditorialCTA>
     </main>
   );
 }

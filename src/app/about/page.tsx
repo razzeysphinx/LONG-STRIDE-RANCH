@@ -1,5 +1,5 @@
 import { FullBleedMedia } from "@/components/media/FullBleedMedia";
-import { CTA } from "@/components/sections/CTA";
+import { EditorialCTA } from "@/components/sections/cta/EditorialCTA";
 import { PageHero } from "@/components/sections/PageHero";
 import { TeamEditorial } from "@/components/sections/TeamEditorial";
 import { media } from "@/data/media";
@@ -101,15 +101,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 07 INQUIRY */}
-      <CTA
+      {/* 07 EDITORIAL INQUIRY */}
+      <EditorialCTA
         eyebrow="Work with Long Stride"
         title="Find the right place to begin."
         href="/contact"
         label="Start an inquiry"
       >
         Start with an inquiry about training, boarding, horse sales or a visit.
-      </CTA>
+      </EditorialCTA>
     </main>
   );
 }

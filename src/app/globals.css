@@ -13,10 +13,11 @@
   --ls-max: 1320px;
   --ease-premium: cubic-bezier(0.2, 0.7, 0.2, 1);
   --type-home-hero: clamp(4.8rem, 9vw, 9rem);
-  --type-page-hero: clamp(4rem, 7vw, 7.5rem);
-  --type-editorial: clamp(3.4rem, 5.5vw, 5.9rem);
+  --type-page-hero: clamp(4rem, 7vw, 7.4rem);
+  --type-editorial: clamp(3.3rem, 5.5vw, 5.9rem);
   --type-section: clamp(2.5rem, 4vw, 4.3rem);
   --type-subhead: clamp(1.7rem, 2.5vw, 2.6rem);
+  --type-lead: clamp(1.05rem, 1.4vw, 1.2rem);
   --type-hero: var(--type-home-hero);
   --type-page: var(--type-page-hero);
   --space-xs: 24px;
@@ -38,6 +39,7 @@ body {
   background: var(--ls-paper);
   color: var(--ls-ink);
   font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -137,8 +139,9 @@ button {
   width: 100%;
   height: 100%;
 }
+.full-bleed-image,
 .full-bleed-media__image {
-  object-position: var(--full-bleed-desktop);
+  object-position: var(--desktop-focal, var(--full-bleed-desktop, 50% 50%));
   filter: saturate(0.9) contrast(1.025);
   transform: scale(1.002);
 }
@@ -296,8 +299,9 @@ button {
   .horse-media__image {
     object-position: var(--media-mobile);
   }
+  .full-bleed-image,
   .full-bleed-media__image {
-    object-position: var(--full-bleed-mobile);
+    object-position: var(--mobile-focal, var(--full-bleed-mobile, 50% 50%));
   }
 }
 @media (prefers-reduced-motion: reduce) {

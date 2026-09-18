@@ -1,153 +1,73 @@
-# Long Stride Ranch — Photography Wishlist & Production Guide
+# Long Stride Ranch — Production Photography Wishlist
 
-This wishlist outlines the exact photographic and video assets required to elevate Long Stride Ranch's visual storytelling while maintaining an uncompromising standard of authenticity. No stock photography should ever be used to fill gaps.
-
----
-
-## Priority A: Immediate Sales & Emotional Storytelling
-
-### 1. Manuka Honey (Comprehensive Sales Portfolio)
-
-- **Head Portrait**
-  - _Orientation / Ratio_: Vertical, 4:5
-  - _Primary Placement_: `/horse-sales/manuka-honey` (Hero / Profile headshot)
-  - _Purpose_: Build immediate emotional connection and individual horse identity.
-  - _Shot Direction_: Natural soft morning light, ears forward, unbridled or clean leather halter, clean soft background with no distractions.
-- **Standing Conformation**
-  - _Orientation / Ratio_: Landscape or Vertical, 4:5 / 5:6
-  - _Primary Placement_: `/horse-sales/manuka-honey` (Conformation & Specifications)
-  - _Purpose_: Objective equestrian evaluation for prospective buyers and trainers.
-  - _Shot Direction_: Level footing, open stance showing all four legs and hooves, ears alert, clean grooming, profile view perpendicular to horse.
-- **Show Jumping in Competition**
-  - _Orientation / Ratio_: Landscape, 3:2
-  - _Primary Placement_: `/horse-sales`, `/horse-sales/manuka-honey`
-  - _Purpose_: Demonstrate scope, technique, and form over standard fences.
-  - _Shot Direction_: Apex of the jump, showing bascule, knees square, rider in balanced two-point position, full jump rails visible.
-- **Rider Partnership in the Ring**
-  - _Orientation / Ratio_: Vertical, 4:5
-  - _Primary Placement_: `/horse-sales/manuka-honey` (Story / Ideal match)
-  - _Purpose_: Showcase calm temperament and rideability with junior/amateur riders.
-  - _Shot Direction_: Flatwork or approach, calm expression, attentive ears.
-- **Observational Video Clip**
-  - _Orientation / Ratio_: Landscape 16:9 & Vertical 4:5
-  - _Primary Placement_: `/horse-sales/manuka-honey` (Video demonstration)
-  - _Purpose_: Uncut, transparent video proof of gaits, jumping, and ground manners.
-  - _Shot Direction_: Natural audio (hooves, breathing), no aggressive cuts or background music, 30–60 seconds steady camera.
-
-### 2. Horse & Rider Emotional Moments
-
-- **Quiet Grooming & Care**
-  - _Orientation / Ratio_: Vertical, 4:5
-  - _Primary Placement_: `/boarding`, Homepage (`HorseMoments`)
-  - _Purpose_: Communicate hands-on, meticulous horsemanship and personal attentiveness.
-  - _Shot Direction_: Soft focus on hand brushing coat or picking hooves, calm horse demeanor, natural stable light.
-- **Rider Touching Horse (Head / Muzzle)**
-  - _Orientation / Ratio_: Vertical, 4:5
-  - _Primary Placement_: `/horses` (The Partnership), `/about`
-  - _Purpose_: Reinforce that "Good riding begins with listening."
-  - _Shot Direction_: Close crop on hands, gentle contact, unposed and authentic.
-- **Bridle & Tack Detail**
-  - _Orientation / Ratio_: Square 1:1 or Vertical 4:5
-  - _Primary Placement_: Editorial details across `/training` and `/about`
-  - _Purpose_: Subtle luxury through craftsmanship, clean leatherwork, and equestrian restraint.
-  - _Shot Direction_: Macro detail of buckled bridle, supple leather, brass hardware, clean horse coat.
-- **Horse Eye Close-Up**
-  - _Orientation / Ratio_: Square 1:1 or Landscape 3:2
-  - _Primary Placement_: `/horses`, Homepage (`Horsemanship`)
-  - _Purpose_: Calmness, depth, and intelligence of the horse.
-  - _Shot Direction_: Reflective light in horse's eye, soft eyelashes, sharp focus, serene tone.
-- **Post-Ride Untacking / Cool Down**
-  - _Orientation / Ratio_: Landscape, 3:2
-  - _Primary Placement_: `/boarding`, `/training`
-  - _Purpose_: Authenticity of everyday routine after the ring.
-  - _Shot Direction_: Rider walking horse on loose rein or loosening girth, horses steaming slightly in cool morning air.
+This document details all required authentic photography and video captures for Long Stride Ranch.
 
 ---
 
-## Priority B: Program & Facility Environment
+## 1. Manuka Honey (Sales Portfolio)
 
-### 1. Training in Action
-
-- **Danielle Flatwork Schooling**
-  - _Orientation / Ratio_: Landscape, 3:2 or Vertical 4:5
-  - _Primary Placement_: `/training` (Philosophy & Rhythm)
-  - _Purpose_: Showcase foundational classical horsemanship and rhythm.
-  - _Shot Direction_: Balanced cadence, engaged hindquarters, light rein contact.
-- **Danielle Ground Interaction**
-  - _Orientation / Ratio_: Vertical, 4:5
-  - _Primary Placement_: `/training` (01 Observe)
-  - _Purpose_: Highlight observation and communication before getting in the saddle.
-  - _Shot Direction_: Danielle studying horse's movement on the lunge line or standing dialogue in arena.
-- **Rider Lesson / Guidance Moment**
-  - _Orientation / Ratio_: Landscape, 3:2
-  - _Primary Placement_: `/training` (Rider development)
-  - _Purpose_: Demonstrate thoughtful, personal coaching style.
-  - _Shot Direction_: Danielle speaking with a student mounted in the arena, collaborative and attentive tone.
-
-### 2. Environment & Stable Atmosphere
-
-- **Barn Exterior & Architecture**
-  - _Orientation / Ratio_: Landscape, 3:2 (Full Bleed capable)
-  - _Primary Placement_: `/boarding` (Environment)
-  - _Purpose_: Establish physical credibility, order, and peaceful facility ambiance.
-  - _Shot Direction_: Wide architectural perspective, clean paddocks, morning or golden hour light.
-- **Barn Aisle Perspective**
-  - _Orientation / Ratio_: Vertical 4:5 or Landscape 3:2
-  - _Primary Placement_: `/boarding` (Around the everyday)
-  - _Purpose_: Show immaculate order, quiet atmosphere, and spacious stalls.
-  - _Shot Direction_: Down the center aisle, horses looking over stall doors, warm natural lighting, sweepingly clean aisle.
-- **Turnout & Pasture Freedom**
-  - _Orientation / Ratio_: Landscape, 16:9 / 3:2
-  - _Primary Placement_: `/boarding`, Homepage (`SeasonalStory`)
-  - _Purpose_: Horse wellbeing and natural lifestyle outside the arena.
-  - _Shot Direction_: Horses grazing or resting in spacious turnout, green lush footing, natural boundaries.
-- **Sunrise / Sunset Atmosphere**
-  - _Orientation / Ratio_: Landscape, 3:2 (Full Bleed capable)
-  - _Primary Placement_: Editorial dividers and hero backgrounds.
-  - _Purpose_: Quiet emotional luxury without clichés.
-  - _Shot Direction_: Low sun angling across misty paddocks or arena drag lines.
-
-### 3. Geographic Seasonality
-
-- **Authentic Wellington, Florida**
-  - _Orientation / Ratio_: Landscape, 3:2
-  - _Primary Placement_: Seasonal story, Contact
-  - _Purpose_: Real representation of winter competition and training base.
-  - _Shot Direction_: Palm fronds, Wellington showgrounds or private seasonal farm, distinct South Florida light.
-- **Authentic Jackson Hole, Wyoming**
-  - _Orientation / Ratio_: Landscape, 3:2
-  - _Primary Placement_: Seasonal story, Contact
-  - _Purpose_: Summer base representation with western mountain tranquility.
-  - _Shot Direction_: Teton backdrop, high-altitude pasture, authentic summer mountain training.
+| Asset                       | Orientation & Ratio            | Intended Page                      | Shot Brief                                                                                  | Purpose                                                    |
+| --------------------------- | ------------------------------ | ---------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| **Head Portrait**           | Vertical, 4:5                  | `/horse-sales/manuka-honey` (Hero) | Soft morning light, alert forward ears, clean leather halter, unadorned natural background. | Immediate horse identity & emotional recognition.          |
+| **Full Body Conformation**  | Landscape, 3:2 / Vertical, 4:5 | `/horse-sales/manuka-honey`        | Level footing, square stance showing all 4 hooves, perpendicular view, immaculate grooming. | Objective evaluation for prospective buyers & trainers.    |
+| **Show Jumping Action**     | Landscape, 3:2                 | `/horse-sales`, Homepage           | Apex of jump over Hunter/Jumper rail, balanced rider, square knees, bascule form.           | Scope, form, and athletic demonstration.                   |
+| **Under Saddle with Rider** | Vertical, 4:5                  | `/horse-sales/manuka-honey`        | Light rein contact, calm cadence, quiet mouth and expression.                               | Temperament & rideability proof for junior/amateur riders. |
+| **Show Ring Moment**        | Landscape, 3:2                 | `/horse-sales/manuka-honey`        | Entering or exiting the ring, natural ring atmosphere and composure.                        | Real show experience context.                              |
+| **Quiet Stable Moment**     | Vertical, 4:5                  | `/horse-sales/manuka-honey`        | Soft moment at stall door or wash rack, resting, relaxed eyes.                              | Ground manners and calm disposition.                       |
+| **Observational Video**     | Landscape 16:9 & 4:5           | `/horse-sales/manuka-honey`        | Continuous 30-60s clip: walk, trot, canter, and two fences. Clean natural audio, no music.  | Transparent, uncut proof of movement and temperament.      |
 
 ---
 
-## Priority C: Team & Operational Portraits
+## 2. Boarding & Everyday Care
 
-- **Danielle Harrity Working Portrait**
-  - _Orientation / Ratio_: Vertical, 4:5
-  - _Primary Placement_: `/about`, Team teasers
-  - _Purpose_: Natural, unpretentious credibility of the head trainer.
-  - _Shot Direction_: Danielle in riding attire at the barn, interacting naturally with tack or a horse; approachable and confident.
-- **Sam Harrity Working Portrait**
-  - _Orientation / Ratio_: Vertical, 4:5
-  - _Primary Placement_: `/about`, Team teasers
-  - _Purpose_: Operational expertise, care standard, and client hospitality.
-  - _Shot Direction_: Sam at the farm, unposed, grounded, reflecting organizational care.
-- **Danielle & Sam Collaborative Moment**
-  - _Orientation / Ratio_: Landscape, 3:2 or Vertical 4:5
-  - _Primary Placement_: `/about`, Homepage (`TeamFeature`)
-  - _Purpose_: Show the cohesive partnership running Long Stride Ranch.
-  - _Shot Direction_: Walking together along barn aisle or ringside, conversational and authentic.
+| Asset                          | Orientation & Ratio | Intended Page         | Shot Brief                                                                 | Purpose                                       |
+| ------------------------------ | ------------------- | --------------------- | -------------------------------------------------------------------------- | --------------------------------------------- |
+| **Quiet Grooming**             | Vertical, 4:5       | `/boarding`           | Hands currying coat or picking hooves, gentle contact, natural barn light. | Demonstrates hands-on attentiveness and care. |
+| **Horse Eye Detail**           | Square, 1:1 / 4:5   | `/boarding`, Homepage | Macro detail of reflective eye, calm lashes, serene tone.                  | Communicates tranquility and wellbeing.       |
+| **Clean Stall Environment**    | Landscape, 3:2      | `/boarding`           | Generous bedding, clean waterer, horse looking out, airy barn aisle.       | Shows comfort and daily cleanliness standard. |
+| **Turnout & Pasture Freedom**  | Landscape, 3:2      | `/boarding`, Homepage | Horses grazing peacefully in lush grass turnout, natural open space.       | Daily horse lifestyle outside work.           |
+| **Thoughtful Feeding Routine** | Vertical, 4:5       | `/boarding`           | Quality hay inspection or individualized feed preparation.                 | Attention to individual nutritional needs.    |
+| **Post-Ride Cool Down**        | Landscape, 3:2      | `/boarding`           | Rider walking horse on loose rein, untacking with care, steaming coat.     | Routine respect for the horse after exertion. |
 
 ---
 
-## Summary of Specifications
+## 3. Training & Development
 
-| Asset                | Target Ratio                  | Min Resolution            | Purpose                       |
-| -------------------- | ----------------------------- | ------------------------- | ----------------------------- |
-| Full-Bleed Heroes    | Fluid (3:2 / 16:9 / 82svh)    | 2400 × 1600+              | High-impact viewport imagery  |
-| Editorial Media      | 4:5 (Portrait) / 3:2 (Action) | 1600 × 2000 / 2000 × 1333 | In-depth story sections       |
-| Conformation / Sales | 5:6 / 4:5                     | 1800 × 2160               | Buyer evaluation              |
-| Details & Macro      | 1:1 (Square) / 4:5            | 1400 × 1400               | Tactile craftsmanship         |
-| Video                | 16:9 (H.264/WebM)             | 1080p @ 60fps             | Transparent movement analysis |
+| Asset                    | Orientation & Ratio | Intended Page | Shot Brief                                                                     | Purpose                                 |
+| ------------------------ | ------------------- | ------------- | ------------------------------------------------------------------------------ | --------------------------------------- |
+| **Danielle Teaching**    | Landscape, 3:2      | `/training`   | Danielle coaching a mounted rider ringside, engaged and collaborative posture. | Demonstrates personal coaching style.   |
+| **Classical Flatwork**   | Landscape, 3:2      | `/training`   | Danielle schooling a horse, engaged hindquarters, light contact, cadence.      | Classical horsemanship foundation.      |
+| **Jumping Schooling**    | Vertical, 4:5       | `/training`   | Training over fences at home arena, deliberate line, rider balance.            | Progression-focused development.        |
+| **Rider Listening**      | Vertical, 4:5       | `/training`   | Student and trainer in quiet conversation between exercises.                   | Communication and mutual understanding. |
+| **Horse Tactile Detail** | Square, 1:1         | `/training`   | Clean bit, supple leather reins, subtle rein vibration.                        | Sensory tactility and craft of riding.  |
+
+---
+
+## 4. People & Partnership
+
+| Asset                            | Orientation & Ratio | Intended Page         | Shot Brief                                                               | Purpose                                     |
+| -------------------------------- | ------------------- | --------------------- | ------------------------------------------------------------------------ | ------------------------------------------- |
+| **Danielle & Sam Collaborative** | Landscape, 3:2      | `/about` (Hero)       | Danielle and Sam together at the barn or rail, unforced conversation.    | Shows cohesive program leadership.          |
+| **Danielle with Horse**          | Vertical, 4:5       | `/about`, `/training` | Danielle standing beside horse, hand on shoulder, grounded relationship. | Head trainer credibility and horse empathy. |
+| **Sam with Horse**               | Vertical, 4:5       | `/about`              | Sam walking or checking on a horse, calm and attentive presence.         | Operational care standard.                  |
+| **Team Interaction**             | Landscape, 3:2      | `/about`              | Barn team in natural routine, immaculate aisle, professional standard.   | Complete organizational reliability.        |
+
+---
+
+## 5. Facility Architecture & Grounds
+
+| Asset                  | Orientation & Ratio | Intended Page   | Shot Brief                                                               | Purpose                            |
+| ---------------------- | ------------------- | --------------- | ------------------------------------------------------------------------ | ---------------------------------- |
+| **Barn Exterior**      | Landscape, 3:2      | `/boarding`     | Architectural wide shot, clean rooflines, peaceful setting, morning sun. | Physical presence and permanence.  |
+| **Arena & Footing**    | Landscape, 3:2      | `/training`     | Freshly groomed arena footing, clean jumps, expansive view.              | Professional training environment. |
+| **Turnout Paddocks**   | Landscape, 3:2      | `/boarding`     | Safe fencing, open grazing space, clean water troughs.                   | Safety and equine comfort.         |
+| **Property Landscape** | Landscape, 3:2      | Homepage, About | Scenic vista of ranch grounds, quiet open horizons.                      | Atmosphere and spatial breadth.    |
+
+---
+
+## 6. Geographic Seasonality
+
+| Asset                        | Orientation & Ratio | Intended Page     | Shot Brief                                                 | Purpose                                          |
+| ---------------------------- | ------------------- | ----------------- | ---------------------------------------------------------- | ------------------------------------------------ |
+| **Wellington Winter Base**   | Landscape, 3:2      | Homepage, Contact | Florida winter light, palms, competition atmosphere.       | Winter Hunter/Jumper circuit context.            |
+| **Jackson Hole Summer Base** | Landscape, 3:2      | Homepage, Contact | Mountain backdrop, crisp western summer air, high pasture. | Summer training tranquility and climate retreat. |

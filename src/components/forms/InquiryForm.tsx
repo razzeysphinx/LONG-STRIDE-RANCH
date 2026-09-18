@@ -9,7 +9,9 @@ const interests = [
   "Schedule a Visit",
   "Renewables",
   "General Inquiry",
-];
+] as const;
+
+type InterestType = (typeof interests)[number];
 
 export function InquiryForm({
   defaultInterest = "Horse Purchase",
@@ -18,14 +20,18 @@ export function InquiryForm({
   defaultInterest?: string;
   horse?: string;
 }) {
-  const normalisedInterest = interests.includes(defaultInterest)
-    ? defaultInterest
+  const normalisedInterest = (interests as readonly string[]).includes(
+    defaultInterest,
+  )
+    ? (defaultInterest as InterestType)
     : "Horse Purchase";
-  const [interest, setInterest] = useState(normalisedInterest);
+
+  const [interest, setInterest] = useState<InterestType>(normalisedInterest);
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
   const [message, setMessage] = useState("");
+
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("sending");
@@ -44,37 +50,61 @@ export function InquiryForm({
       setMessage("Online submission is temporarily unavailable.");
     }
   }
-  if (status === "success")
+
+  if (status === "success") {
     return (
-      <div className="rounded-[18px] bg-[var(--ls-cream)] p-8 md:p-12">
-        <p className="ls-eyebrow">Thank you</p>
-        <h2 className="ls-display text-6xl">Your inquiry is on its way.</h2>
-        <p className="mt-5 max-w-lg text-sm leading-7 text-[var(--ls-muted)]">
+      <div className="rounded-[16px] bg-[var(--ls-cream)] p-8 md:p-12">
+        <p className="ls-eyebrow text-[var(--ls-forest)]">Thank you</p>
+        <h2 className="ls-display text-5xl md:text-6xl">
+          Your inquiry is on its way.
+        </h2>
+        <p className="mt-5 max-w-lg text-[15px] leading-7 text-[var(--ls-muted)]">
           Long Stride will be in touch soon. We appreciate the context you
           shared.
         </p>
       </div>
     );
+  }
+
   return (
     <form
       onSubmit={onSubmit}
       data-inquiry-form
-      className="rounded-[18px] bg-[var(--ls-cream)] p-6 md:p-9"
+      className="rounded-[16px] bg-[var(--ls-cream)] p-6 md:p-9"
     >
-      <div className="mb-6 flex flex-wrap gap-2" aria-label="Inquiry type">
-        {interests.map((item) => (
-          <button
-            key={item}
-            type="button"
-            onClick={() => setInterest(item)}
-            aria-pressed={interest === item}
-            className={`border px-3 py-2 text-[10px] font-bold uppercase tracking-[.09em] ${interest === item ? "border-[var(--ls-forest)] bg-[var(--ls-forest)] text-white" : "border-[var(--ls-line)]"}`}
-          >
-            {item}
-          </button>
-        ))}
+      <div className="mb-8">
+        <p className="ls-eyebrow text-[var(--ls-forest)]">
+          What brings you to Long Stride?
+        </p>
+        <div
+          className="mt-3 flex flex-wrap gap-2"
+          role="tablist"
+          aria-label="Inquiry interest categories"
+        >
+          {interests.map((item) => {
+            const isSelected = interest === item;
+            return (
+              <button
+                key={item}
+                type="button"
+                role="tab"
+                aria-selected={isSelected}
+                onClick={() => setInterest(item)}
+                className={`rounded-full px-4 py-2.5 text-[11px] font-bold uppercase tracking-[.09em] transition-all duration-200 ${
+                  isSelected
+                    ? "bg-[var(--ls-forest)] text-white shadow-sm"
+                    : "border border-[var(--ls-line)] bg-white/60 text-[var(--ls-ink)] hover:border-[var(--ls-forest)] hover:bg-white"
+                }`}
+              >
+                {item}
+              </button>
+            );
+          })}
+        </div>
       </div>
+
       <input type="hidden" name="interest" value={interest} />
+
       <div className="grid gap-4 md:grid-cols-2">
         <div className="field">
           <label htmlFor="name">Name</label>
@@ -94,6 +124,8 @@ export function InquiryForm({
           <label htmlFor="phone">Phone</label>
           <input id="phone" name="phone" type="tel" autoComplete="tel" />
         </div>
+
+        {/* Adaptive fields per selected interest */}
         {interest === "Horse Purchase" && (
           <>
             <div className="field">
@@ -101,8 +133,8 @@ export function InquiryForm({
               <input id="horse" name="horse" defaultValue={horse} />
             </div>
             <div className="field">
-              <label htmlFor="experience">Rider experience</label>
-              <input id="experience" name="riderExperience" />
+              <label htmlFor="riderExperience">Rider experience</label>
+              <input id="riderExperience" name="riderExperience" />
             </div>
             <div className="field md:col-span-2">
               <label htmlFor="discipline">Discipline</label>
@@ -110,11 +142,12 @@ export function InquiryForm({
             </div>
           </>
         )}
+
         {interest === "Training" && (
           <>
             <div className="field md:col-span-2">
-              <label htmlFor="context">Rider / horse context</label>
-              <input id="context" name="context" />
+              <label htmlFor="trainingContext">Horse / rider context</label>
+              <input id="trainingContext" name="context" />
             </div>
             <div className="field md:col-span-2">
               <label htmlFor="goals">Goals</label>
@@ -122,12 +155,35 @@ export function InquiryForm({
             </div>
           </>
         )}
+
         {interest === "Boarding" && (
           <div className="field md:col-span-2">
-            <label htmlFor="context">Horse context</label>
-            <input id="context" name="context" />
+            <label htmlFor="horseContext">Horse context</label>
+            <input id="horseContext" name="context" />
           </div>
         )}
+
+        {interest === "Schedule a Visit" && (
+          <>
+            <div className="field">
+              <label htmlFor="visitTiming">Preferred timing</label>
+              <input
+                id="visitTiming"
+                name="timing"
+                placeholder="e.g. Next week, mornings"
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="partySize">Party size</label>
+              <input
+                id="partySize"
+                name="partySize"
+                placeholder="e.g. 2 guests"
+              />
+            </div>
+          </>
+        )}
+
         {interest === "Renewables" && (
           <>
             <div className="field">
@@ -135,23 +191,27 @@ export function InquiryForm({
               <input id="organization" name="organization" />
             </div>
             <div className="field">
-              <label htmlFor="context">Project context</label>
-              <input id="context" name="context" />
+              <label htmlFor="projectContext">Project context</label>
+              <input id="projectContext" name="context" />
             </div>
           </>
         )}
+
+        {/* Spam protection honeypot */}
         <div className="sr-only">
           <label htmlFor="website">Website</label>
           <input id="website" name="website" tabIndex={-1} autoComplete="off" />
         </div>
+
         <div className="field md:col-span-2">
           <label htmlFor="message">How can we help?</label>
           <textarea id="message" name="message" required />
         </div>
-        <div className="md:col-span-2">
+
+        <div className="md:col-span-2 pt-2">
           <button
             disabled={status === "sending"}
-            className="rounded-full bg-[var(--ls-forest)] px-6 py-4 text-[11px] font-bold uppercase tracking-[.11em] text-white disabled:opacity-60"
+            className="inline-flex min-h-[46px] items-center justify-center rounded-full bg-[var(--ls-forest)] px-8 py-3.5 text-[11px] font-bold uppercase tracking-[.11em] text-white transition-opacity hover:opacity-90 disabled:opacity-60"
             type="submit"
           >
             {status === "sending" ? "Sending…" : "Send inquiry"}
@@ -166,7 +226,7 @@ export function InquiryForm({
                 {" "}
                 Email Danielle directly:{" "}
                 <a
-                  className="underline"
+                  className="underline hover:text-[var(--ls-brass)]"
                   href="mailto:danielle@longstrideranch.com"
                 >
                   danielle@longstrideranch.com

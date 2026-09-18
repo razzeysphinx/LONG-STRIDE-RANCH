@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 
-type FullBleedMediaProps = {
+type Props = {
   src: string;
   alt: string;
   focalDesktop?: string;
@@ -21,12 +21,14 @@ export function FullBleedMedia({
   sizes = "100vw",
   className = "",
   imageClassName = "",
-}: FullBleedMediaProps) {
+}: Props) {
   return (
     <div
       className={`full-bleed-media absolute inset-0 overflow-hidden ${className}`}
       style={
         {
+          "--desktop-focal": focalDesktop,
+          "--mobile-focal": focalMobile ?? focalDesktop,
           "--full-bleed-desktop": focalDesktop,
           "--full-bleed-mobile": focalMobile ?? focalDesktop,
         } as CSSProperties
@@ -38,7 +40,7 @@ export function FullBleedMedia({
         fill
         priority={priority}
         sizes={sizes}
-        className={`full-bleed-media__image object-cover ${imageClassName}`}
+        className={`full-bleed-image full-bleed-media__image object-cover ${imageClassName}`}
       />
     </div>
   );
