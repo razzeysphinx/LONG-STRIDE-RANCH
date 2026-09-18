@@ -1,4 +1,5 @@
 import { CTA } from "@/components/sections/CTA";
+import { HorseMedia } from "@/components/media/HorseMedia";
 import { PageHero } from "@/components/sections/PageHero";
 import { TeamEditorial } from "@/components/sections/TeamEditorial";
 import { media } from "@/data/media";
@@ -51,7 +52,14 @@ export default function AboutPage() {
         focalMobile={media.danielleRiding.focal.mobile}
       />
       <section className="relative min-h-[440px] overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/horses/competition.webp')] bg-cover bg-center image-treatment" />
+        <HorseMedia
+          {...media.competition}
+          ratio="cinematic"
+          focalDesktop={media.competition.focal.desktop}
+          focalMobile={media.competition.focal.mobile}
+          sizes="100vw"
+          className="absolute inset-0 h-full w-full aspect-auto"
+        />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,17,12,.55),transparent)]" />
         <div className="ls-container relative z-10 flex min-h-[440px] items-end py-14 text-white">
           <p className="ls-display max-w-3xl text-[clamp(3.5rem,6vw,6.6rem)]">

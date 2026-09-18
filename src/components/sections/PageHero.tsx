@@ -47,6 +47,33 @@ export function PageHero({
         </div>
       </section>
     );
+
+  if (variant === "split" && image)
+    return (
+      <section className="bg-[var(--ls-cream)] pt-28 md:pt-32">
+        <div className="ls-container grid items-end gap-10 lg:grid-cols-[.9fr_1.1fr]">
+          <div className="pb-14 lg:pb-20">
+            <p className="ls-eyebrow">{eyebrow}</p>
+            <h1 className="ls-display max-w-3xl text-[clamp(4rem,7.5vw,8rem)]">
+              {title}
+            </h1>
+            <div className="mt-7 max-w-xl text-[15px] leading-7 text-[var(--ls-muted)]">
+              {children}
+            </div>
+          </div>
+          <HorseMedia
+            src={image.src}
+            alt={image.alt}
+            ratio="horse"
+            focalDesktop={image.focalDesktop}
+            focalMobile={image.focalMobile}
+            priority
+            sizes="(max-width: 1024px) 100vw, 55vw"
+          />
+        </div>
+      </section>
+    );
+
   return (
     <section className="bg-[var(--ls-cream)] pb-20 pt-36 md:pb-24 md:pt-44">
       <div className="ls-container grid items-end gap-10 md:grid-cols-[1.15fr_.85fr]">

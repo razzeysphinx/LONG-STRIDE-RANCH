@@ -8,6 +8,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [pastHero, setPastHero] = useState(false);
+  const [inquiryBlocked, setInquiryBlocked] = useState(false);
   const closeRef = useRef<HTMLButtonElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const wasOpen = useRef(false);
@@ -20,6 +21,24 @@ export function Header() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const blockedAreas = [
+      document.querySelector("[data-inquiry-form]"),
+      document.querySelector("#site-footer"),
+    ].filter((node): node is Element => node !== null);
+
+    if (!blockedAreas.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) =>
+        setInquiryBlocked(entries.some((entry) => entry.isIntersecting)),
+      { threshold: 0.08 },
+    );
+
+    blockedAreas.forEach((area) => observer.observe(area));
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -112,7 +131,7 @@ export function Header() {
           </nav>
         </div>
       )}
-      {pastHero && !open && (
+      {pastHero && !open && !inquiryBlocked && (
         <Link className="mobile-inquiry lg:hidden" href="/contact">
           Start an inquiry
         </Link>

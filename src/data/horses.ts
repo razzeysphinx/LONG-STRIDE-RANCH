@@ -8,9 +8,9 @@ export const horses: Horse[] = [
     status: "available",
     disciplines: ["Children's Hunter Pony"],
     summary:
-      "Fancy, brave and kind, with great kid miles, lovely changes and beautiful form over fences.",
+      "A Children's Hunter Pony described by Long Stride as fancy, brave and kind.",
     description:
-      "Known as Roa, Manuka Honey is represented by Long Stride as a Children's Hunter Pony. Contact Long Stride for current availability and a considered conversation about fit.",
+      "Manuka Honey is represented by Long Stride as a Children's Hunter Pony. Contact Long Stride for current availability and a considered conversation about fit.",
     images: [
       {
         src: "/images/sales/manuka-honey.webp",

@@ -58,6 +58,7 @@ export function InquiryForm({
   return (
     <form
       onSubmit={onSubmit}
+      data-inquiry-form
       className="rounded-[18px] bg-[var(--ls-cream)] p-6 md:p-9"
     >
       <div className="mb-6 flex flex-wrap gap-2" aria-label="Inquiry type">
@@ -66,6 +67,7 @@ export function InquiryForm({
             key={item}
             type="button"
             onClick={() => setInterest(item)}
+            aria-pressed={interest === item}
             className={`border px-3 py-2 text-[10px] font-bold uppercase tracking-[.09em] ${interest === item ? "border-[var(--ls-forest)] bg-[var(--ls-forest)] text-white" : "border-[var(--ls-line)]"}`}
           >
             {item}

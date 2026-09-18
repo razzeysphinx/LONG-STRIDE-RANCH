@@ -9,6 +9,8 @@ type InquiryPayload = {
   riderExperience?: string;
   discipline?: string;
   horse?: string;
+  organization?: string;
+  context?: string;
   message?: string;
   website?: string;
 };
@@ -50,6 +52,8 @@ export async function POST(request: Request) {
       ["Horse", data.horse],
       ["Rider experience", data.riderExperience],
       ["Discipline", data.discipline],
+      ["Organization", data.organization],
+      ["Context", data.context],
       ["Message", data.message],
     ]
       .filter(([, value]) => Boolean(value))

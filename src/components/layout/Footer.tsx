@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-[#102018] py-14 text-white/70">
+    <footer id="site-footer" className="bg-[#102018] py-14 text-white/70">
       <div className="ls-container">
         <div className="grid gap-10 md:grid-cols-[1.4fr_.7fr_.7fr]">
           <div>

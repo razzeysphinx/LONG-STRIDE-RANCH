@@ -120,7 +120,7 @@ export default function TrainingPage() {
       <CTA
         eyebrow="Training inquiry"
         title="Start with your horse and your goals."
-        href="/contact?interest=Training%20%26%20Lessons"
+        href="/contact?interest=Training"
         label="Ask about training"
       >
         Share a little context and Long Stride can help determine the most
